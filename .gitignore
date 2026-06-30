@@ -1,0 +1,15 @@
+# Large data files
+*.bed
+*.bw
+*.bam
+*.bai
+*.gz
+*.json
+*.tsv
+data/raw/
+# Python cache
+__pycache__/
+*.pyc
+# R temporary files
+.Rhistory
+.RData
