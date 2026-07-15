@@ -10,3 +10,40 @@
 | 06/30/2026 | Part 1 - Final signature size after TCGA mapping | Minimum gene set threshold: 250-300 genes. Analysis yieled 419 genes mapped to TCGA Entrez IDs/724 protein-coding CIA genes | Signature captures functional breadth across CIA-proximal pathways, not a curated known-pathway list. Dropping below 250 would risk the score being dominated by a single functional category rather than reflecting the full Alu-ERE regulatory landscape |
 | 2026-06 | Part 1 | Exclude BRCA_Normal (n=36) from primary subtype comparison | PAM50 Normal-like tumors are NOT normal tissue — likely heavily stromal-contaminated tumors, not a true subtype. Including as baseline would be biologically misleading as true matched normals are absent from this dataset | Include as a sixth subtype; include as biological control baseline — both rejected due to ambiguous biological identity |
 | 2026-06 | Part 1 | Expression matrix accepted as clean; 2 samples dropped via inner join | RSEM range 0–249,463 is expected; no NAs; high values reflect highly expressed genes. 2 samples had clinical data only and NA subtype — inner join exclusion causes no information loss | Impute missing expression values — rejected as only 2 samples affected |
+[2026-07] [Part 5] [Han et al. data availability — gate 1]
+Checked JBC published page, ScienceDirect mirror, and full bioRxiv preprint
+(2022.09.23.509212) text. No Data Availability statement or GEO accession
+found in any version. This is atypical for a 2025 JBC paper and blocks
+direct peak-coordinate overlap for H2 as originally planned.
+Decision: email corresponding authors (Ramachandran, Kabos) requesting data;
+in parallel, proceed with H2 as a within-Kim-only motif co-occurrence test
+(STAT1/IRF motifs inside Kim et al.'s pM-responsive ERα peaks) as a fallback
+that doesn't require Han's raw data. Upgrade to full two-lab overlap if a
+reply provides access.
+
+[2026-07] [Part 5] [Kim et al. GEO accessions — confirmed]
+RNA-seq: GSE298771 | ChIP-seq: GSE298767 | ATAC-seq: GSE298769
+PRO-seq: GSE298770 | Superseries: GSE298773 | RIME: MSV000098072
+Source: Data and Materials section, bioRxiv 2025.08.08.669412 full text.
+
+[2026-07] [Part 5] [Han et al. data availability — gate 1]
+Checked JBC published page, ScienceDirect mirror, and full bioRxiv preprint
+(2022.09.23.509212) text. No Data Availability statement or GEO accession
+found in any version. This is atypical for a 2025 JBC paper and blocks
+direct peak-coordinate overlap for H2 as originally planned.
+Decision: email corresponding authors (Ramachandran, Kabos) requesting data;
+in parallel, proceed with H2 as a within-Kim-only motif co-occurrence test
+(STAT1/IRF motifs inside Kim et al.'s pM-responsive ERα peaks) as a fallback
+that doesn't require Han's raw data. Upgrade to full two-lab overlap if a
+reply provides access.
+
+[2026-07] [Part 5] [Kim et al. GEO accessions — confirmed]
+RNA-seq: GSE298771 | ChIP-seq: GSE298767 | ATAC-seq: GSE298769
+PRO-seq: GSE298770 | Superseries: GSE298773 | RIME: MSV000098072
+Source: Data and Materials section, bioRxiv 2025.08.08.669412 full text.
+
+[2026-07] [Part 5] [Option 3 motif IDs corrected]
+MA0517.1 is STAT1::STAT2 heterodimer, not standalone STAT2. Corrected set:
+STAT1=MA0137.3, STAT2=MA1623.1, IRF1=MA0050.2, dimer=MA0517.1 (included).
+Source: JASPAR (jaspar.elixir.no), cross-checked against Kolendowski/Weichselbaum-
+era literature use of MA0137.2/MA0050.1 as the STAT1/IRF1 convention.
