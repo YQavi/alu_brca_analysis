@@ -47,3 +47,15 @@ MA0517.1 is STAT1::STAT2 heterodimer, not standalone STAT2. Corrected set:
 STAT1=MA0137.3, STAT2=MA1623.1, IRF1=MA0050.2, dimer=MA0517.1 (included).
 Source: JASPAR (jaspar.elixir.no), cross-checked against Kolendowski/Weichselbaum-
 era literature use of MA0137.2/MA0050.1 as the STAT1/IRF1 convention.
+
+[2026-07] [Part 5] [Real bug: wrong SRX accessions downloaded/aligned for ER 10pM]
+Positionally-inferred SRX accessions (assumed sequential by dose) were wrong -
+GEO's SRX assignment for GSE298767 is not sequential by treatment condition.
+Downloaded/aligned files were actually ER@1nM rep3 (SRX29018172) + two 10nM
+input reps (SRX29018173/174), not ER@10pM. This produced a near-zero MACS3
+peak call that looked like a parameter problem but was a sample-identity
+problem. Root cause found by directly grep'ing the GEO MINiML XML for the
+true Title->SRX mapping rather than inferring from list position.
+Fix: built accession_map_verified.tsv from the XML, verified before every
+download from here forward. Misdownloaded files were not wasted - renamed
+and kept as real ER@1nM/input@10nM data, useful for later doses.
