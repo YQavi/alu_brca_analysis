@@ -82,3 +82,13 @@ non-overlapping. Both the original bigwig comparison and the ER_10pM_v2
 peak-overlap check were invalid as a result. Re-ran with correct hg38
 coordinates. All genomic coordinate checks going forward verified against
 hg38 explicitly before use.
+
+[2026-07] [Part 5] [Real peak counts: 3 of 4 doses complete]
+10pM: 99 peaks | 100pM: 2,607 peaks | 1nM: 5,764 peaks (pre-alt-filter)
+All MACS3 q<0.05, MAPQ>=30, correct verified SRX/SRR accessions.
+Monotonic increase with dose, consistent with Kim et al. Fig S3B shape.
+1nM used multi-replicate MACS3 mode (2 BAMs to -t, 2 to -c) combining
+newly-aligned reps A/B with repC recovered from the earlier mismapped-
+accession download.
+Remaining: 10nM (partial FASTQ already on disk from mismapped download -
+input reps 1,2 as SRR33796548/543; need rep3 + all 3 ER reps).
