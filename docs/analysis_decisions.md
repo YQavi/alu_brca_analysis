@@ -59,3 +59,10 @@ true Title->SRX mapping rather than inferring from list position.
 Fix: built accession_map_verified.tsv from the XML, verified before every
 download from here forward. Misdownloaded files were not wasted - renamed
 and kept as real ER@1nM/input@10nM data, useful for later doses.
+
+[2026-07] [Part 5] [10pM input alignment rate anomaly]
+ER_10pM_input_v2 aligned at 64.59% vs treatment's 94.05% - a larger gap
+than expected between input and ChIP. ~38M reads still aligned, sufficient
+for background estimation, so proceeded without re-trimming/re-downloading.
+Worth adapter-trimming (fastp/cutadapt) before aligning future input samples
+if the pattern recurs at other doses.
