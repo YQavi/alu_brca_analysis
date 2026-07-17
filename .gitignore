@@ -13,3 +13,4 @@ __pycache__/
 # R temporary files
 .Rhistory
 .RData
+!part5_dose_switch/data/raw/accession_map_verified.tsv
