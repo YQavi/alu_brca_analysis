@@ -74,3 +74,11 @@ Fold enrichment 7-77x, peak widths ~200-450bp - biologically plausible,
 consistent with low-dose ERBS being the smallest/most selective cistrome
 per Kim et al. Fig S3B. This supersedes both the Path A bigwig
 approximation and the earlier mismapped-sample zero-peak result.
+
+[2026-07] [Part 5] [Coordinate bug: GREB1 validation used hg19 coordinates on hg38 data]
+Earlier GREB1 sanity-check window (chr2:11,674,000-11,677,000) was hg19 -
+true hg38 GREB1 gene body is chr2:11,482,341-11,642,789, ~30kb away and
+non-overlapping. Both the original bigwig comparison and the ER_10pM_v2
+peak-overlap check were invalid as a result. Re-ran with correct hg38
+coordinates. All genomic coordinate checks going forward verified against
+hg38 explicitly before use.
