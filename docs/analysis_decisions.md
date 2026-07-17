@@ -66,3 +66,11 @@ than expected between input and ChIP. ~38M reads still aligned, sufficient
 for background estimation, so proceeded without re-trimming/re-downloading.
 Worth adapter-trimming (fastp/cutadapt) before aligning future input samples
 if the pattern recurs at other doses.
+
+[2026-07] [Part 5] [First real, trustworthy peak set: ER 10pM]
+99 peaks called, ER_10pM_v2_real (MACS3, q<0.05, correct SRX-verified
+accessions, MAPQ>=30 filtered, 36.4M treatment / 32.8M input reads).
+Fold enrichment 7-77x, peak widths ~200-450bp - biologically plausible,
+consistent with low-dose ERBS being the smallest/most selective cistrome
+per Kim et al. Fig S3B. This supersedes both the Path A bigwig
+approximation and the earlier mismapped-sample zero-peak result.
