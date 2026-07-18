@@ -1,16 +1,20 @@
-# Large data files
-*.bed
-*.bw
+# Raw and processed data - never track, at any nesting depth
+**/data/raw/**
+**/data/processed/**
+
+# Exceptions: small reference/tracking files worth versioning even under data/raw
+!**/data/raw/accession_map_verified.tsv
+!**/data/raw/*_verified.tsv
+
+# Compiled/binary sequencing formats, wherever they appear
 *.bam
 *.bai
-*.gz
-*.json
-*.tsv
-data/raw/
+*.sra
+
 # Python cache
 __pycache__/
 *.pyc
+
 # R temporary files
 .Rhistory
 .RData
-!part5_dose_switch/data/raw/accession_map_verified.tsv
