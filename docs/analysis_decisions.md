@@ -102,3 +102,13 @@ This closes out the raw peak-calling phase of Week 2. Next: define
 pM*/nM* combined groups (10pM+100pM vs 1nM+10nM, matching Kim et al.'s
 own convention) and move to H1 (Alu subfamily enrichment) and H2
 (STAT1/IRF motif co-occurrence) in Week 3.
+
+[2026-07] [Part 5] [MILESTONE: All 4 doses have real, verified peak sets]
+10pM: 99 | 100pM: 2,607 | 1nM: 5,764 | 10nM: 13,118
+(standard chromosomes only, MACS3 q<0.05, MAPQ>=30, all SRX/SRR accessions
+cross-verified via ENA before download). Monotonic dose-response increase
+across all four points, consistent with Kim et al. Fig S3B shape.
+This closes out the raw peak-calling phase of Week 2. Next: define
+pM*/nM* combined groups (10pM+100pM vs 1nM+10nM, matching Kim et al.'s
+own convention) and move to H1 (Alu subfamily enrichment) and H2
+(STAT1/IRF motif co-occurrence) in Week 3.
