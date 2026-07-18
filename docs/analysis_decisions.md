@@ -112,3 +112,16 @@ This closes out the raw peak-calling phase of Week 2. Next: define
 pM*/nM* combined groups (10pM+100pM vs 1nM+10nM, matching Kim et al.'s
 own convention) and move to H1 (Alu subfamily enrichment) and H2
 (STAT1/IRF motif co-occurrence) in Week 3.
+
+[2026-07] [Part 5] [H1 first-pass result — with a major confound flagged]
+Real subfamily-tiered Alu overlap (young/middle/old vs pM*/nM* merged peaks):
+all tiers under-represented vs genome-wide null; young MOST depleted
+(ratio 0.45) in both dose groups - opposite direction from H1's prediction.
+CRITICAL CAVEAT: MAPQ>=30 filtering (used throughout all peak calls) likely
+discriminates against young Alu specifically, since low-divergence copies
+are the most prone to multi-mapping and thus most likely to be discarded
+regardless of true ERalpha occupancy. Current result may reflect detection-
+power bias, not biology. Before concluding H1 is false: rerun peak calling
+allowing multi-mapped reads (e.g. bowtie2 -k with fractional/best-scoring
+assignment, or a repeat-aware caller) and compare young-tier overlap rate
+with vs without the MAPQ filter.
