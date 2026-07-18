@@ -125,3 +125,16 @@ power bias, not biology. Before concluding H1 is false: rerun peak calling
 allowing multi-mapped reads (e.g. bowtie2 -k with fractional/best-scoring
 assignment, or a repeat-aware caller) and compare young-tier overlap rate
 with vs without the MAPQ filter.
+
+[2026-07] [Part 5] [H1 statistical result: significant graded depletion by Alu age]
+binom.test results, all vs genome-wide null:
+young pM* p=2.16e-4 | young nM* p=2.17e-17
+middle pM* p=2.81e-13 | middle nM* p=6.8e-9
+old pM* p=3.64e-3 | old nM* p=0.979 (NOT significant - only null result)
+Pattern: depletion strength scales inversely with Alu age (young most
+depleted, old ~indistinguishable from random). This gradient is consistent
+with EITHER a real biological effect OR the MAPQ>=30 multi-mapping confound
+(young Alu = most cross-mapping = most read loss), which would produce an
+identical gradient for purely technical reasons. UNRESOLVED - cannot
+currently distinguish the two explanations. Do not report/interpret this
+result further until the multi-mapping confound is directly tested.
