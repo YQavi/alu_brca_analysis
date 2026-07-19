@@ -154,3 +154,19 @@ accept this as a genuine negative result for H1 and reframe the Part 5
 narrative accordingly, or (b) run the same unfiltered comparison at 100pM/
 1nM/10nM for a larger-sample confirmation before committing to the
 reframe.
+
+[2026-07] [Part 5] [H1 CONFOUND RESOLVED: MAPQ filter ruled out across 3 doses]
+Unfiltered vs filtered young-Alu overlap rate, per dose:
+100pM: 0.65% -> 0.70% | 1nM: 0.71% -> 0.70% | 10nM: 0.66% -> 0.63%
+All changes <0.1pp, no consistent direction - MAPQ filtering has no
+material effect on young-Alu detection rate. This rules out multi-mapping
+as the explanation for last night's depletion finding.
+CONCLUSION: H1 (young Alu enriched for ERalpha binding) is NOT supported.
+The reproducible finding is the opposite: ERalpha peaks show genuine,
+filter-independent depletion at young Alu elements (~0.6-0.7% overlap vs
+1.46% genome-wide expectation), graded by subfamily age (young most
+depleted, old ~null). This is now a well-evidenced negative result for
+the original H1 mechanism, not an artifact. Reframe needed for Part 5
+narrative - see discussion needed on whether depletion itself is the
+new finding to build the story around, or whether to pivot to H2 first
+and revisit H1 framing after.
