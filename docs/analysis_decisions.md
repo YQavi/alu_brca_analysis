@@ -138,3 +138,19 @@ with EITHER a real biological effect OR the MAPQ>=30 multi-mapping confound
 identical gradient for purely technical reasons. UNRESOLVED - cannot
 currently distinguish the two explanations. Do not report/interpret this
 result further until the multi-mapping confound is directly tested.
+
+[2026-07] [Part 5] [H1 confound test result: MAPQ filter ruled out]
+Reran 10pM peak calling without MAPQ filter (all mapped reads, no
+uniqueness requirement). Young-Alu overlap did NOT improve - if anything
+got worse (1/99 filtered -> 0/120 unfiltered). This is the opposite of
+what the multi-mapping confound predicts, and argues the MAPQ>=30 filter
+is not suppressing real young-Alu signal.
+CONCLUSION (provisional, single-dose test): H1 as stated (young Alu
+enriched for ERalpha binding) is NOT supported. The graded depletion
+found last night (young most depleted, old ~null) appears to be a real
+pattern, not a filtering artifact - though only directly confound-tested
+at one dose (10pM) with a small peak count. Next: decide whether to (a)
+accept this as a genuine negative result for H1 and reframe the Part 5
+narrative accordingly, or (b) run the same unfiltered comparison at 100pM/
+1nM/10nM for a larger-sample confirmation before committing to the
+reframe.
