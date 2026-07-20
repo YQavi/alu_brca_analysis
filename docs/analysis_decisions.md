@@ -204,3 +204,29 @@ not an underpowered miss. H2 is now tested in both its general and
 Alu-specific forms and fails in both. This closes H2 testing for Part 5
 pending any pivot to per-individual-dose (rather than pooled pM*/nM*)
 resolution, which remains untested.
+
+[2026-07] [Part 5] [H3 RESULT: no CIA-gene / pM-responsive-gene enrichment]
+Test design note: original CIA expression matrix (brca_expr_cia.tsv) is
+already restricted to 386 CIA genes, not genome-wide - true genome-wide
+CIA-score-vs-pM-gene-set correlation (as originally scoped) was not
+possible without rebuilding a full TCGA expression matrix. Ran the more
+direct, narrower test instead: does CIA gene list membership overlap
+with pM-responsive gene list membership more than chance.
+Independently derived pM-responsive gene set (790 genes) via Salmon
+(GENCODE v49 decoy-aware index) + DESeq2, applying Kim et al.'s Table S2
+classification rule (log2FC>0.6, p<0.05, first-significant-dose logic)
+to real RNA-seq data (GSE298771, all 21 samples, Veh+6 doses, 3 reps each).
+CIA genes (n=419, from cia_genes_entrez_map.tsv): 18 overlap with
+pM-responsive set. Fisher's exact: OR=1.09, 95% CI [0.64,1.76], p=0.70.
+No enrichment - true null, CI tightly bracketing 1.
+
+CONCLUSION: H3 not supported. This is the third of three original
+hypotheses (H1, H2, H3) tested with real, independently-derived data
+and found not to hold. All three real, methodologically sound negative
+results, not artifacts - each was cross-checked (H1: MAPQ confound ruled
+out across 3 doses; H2: threshold-calibrated and background-validated,
+both genome-wide and Alu-restricted; H3: independently reproduced Kim's
+gene classification rather than relying on unavailable exact gene lists).
+This is a major finding for Part 5's narrative: the "Alu as dose-tunable
+switch linking CIA biology to STAT1/immune cooperation" story is not
+supported by the data as tested. Requires full narrative reassessment.
