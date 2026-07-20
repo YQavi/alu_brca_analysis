@@ -170,3 +170,25 @@ the original H1 mechanism, not an artifact. Reframe needed for Part 5
 narrative - see discussion needed on whether depletion itself is the
 new finding to build the story around, or whether to pivot to H2 first
 and revisit H1 framing after.
+
+[2026-07] [Part 5] [H2 RESULT: no STAT1/IRF motif differential between pM*/nM*]
+Threshold calibration: p<0.005 (Kim et al.'s stated threshold) was too
+permissive for these short JASPAR PWMs at 400bp/dual-strand scan - both
+groups saturated at 97-98% hit rate, uninformative. FIMO's internal
+q-value was rejected as a comparison metric (independently FDR-corrected
+per file, unfair given pM*=2706 vs nM*=18893 sequences - different
+multiple-testing burden). Settled on fixed raw p<0.0001 threshold,
+applied identically to both groups, validated against a random genomic
+background (5/2700 random windows hit any motif at this threshold, vs
+200-600/group in real peaks - confirms threshold has real discriminating
+power, not just stringency for its own sake).
+
+RESULT at calibrated threshold: STAT1 (MA0137.3) pM=10.64% nM=11.23%
+OR=0.94 p=0.378 | STAT2 (MA1623.1) OR=1.03 p=0.551 | IRF1 (MA0050.2)
+OR=0.95 p=0.352 | STAT1::STAT2 dimer (MA0517.1) OR=1.00 p=0.934.
+No motif shows significant differential enrichment between dose groups.//
+CONCLUSION: H2 not supported. This is now the second of two central
+hypotheses (with H1) tested with real, calibrated, background-validated
+methodology and found NOT to hold as originally framed. Both real,
+trustworthy negative results - not artifacts. Needs a full narrative
+reassessment before continuing to H3/H4/H5 as originally scoped.
