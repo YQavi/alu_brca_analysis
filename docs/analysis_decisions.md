@@ -192,3 +192,15 @@ hypotheses (with H1) tested with real, calibrated, background-validated
 methodology and found NOT to hold as originally framed. Both real,
 trustworthy negative results - not artifacts. Needs a full narrative
 reassessment before continuing to H3/H4/H5 as originally scoped.
+
+[2026-07] [Part 5] [H2 Alu-restricted retest: confirms genome-wide null]
+Restricted the STAT1/IRF motif comparison to only pM*/nM* peaks overlapping
+Alu elements (n=270 pM*, n=2347 nM*), closing the gap where the earlier
+H2 test had drifted from the original Alu-anchored formulation to a
+genome-wide one. Result matches the genome-wide test almost exactly:
+IRF1 OR=1.00 p=1.00, STAT2 OR=1.01 p=1.00, dimer OR=0.96 p=0.87,
+STAT1 OR=1.13 p=0.56. No directional lean on any motif - true null,
+not an underpowered miss. H2 is now tested in both its general and
+Alu-specific forms and fails in both. This closes H2 testing for Part 5
+pending any pivot to per-individual-dose (rather than pooled pM*/nM*)
+resolution, which remains untested.
