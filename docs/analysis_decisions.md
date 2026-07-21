@@ -248,3 +248,21 @@ mechanistic explanation is still open. ERalpha avoids young Alu despite
 young Alu being chromatin-accessible at baseline, which argues for a
 more specific, sequence- or factor-level exclusion mechanism rather than
 simple heterochromatin/silencing.
+
+[2026-07] [Part 5] [Mechanistic test: CpG density does NOT explain within-tier ERalpha binding]
+GC%/CpG o/e shows a real, monotonic gradient with Alu age (young=0.542/0.617,
+middle=0.515/0.357, old=0.500/0.177 GC%/CpG o/e) - confirms age-tiering
+validity independently. But within young Alu specifically, ERalpha-bound
+copies (n=88, from nM* overlap) show no significant CpG o/e difference
+from unbound copies (n=145,926): bound mean=0.626, unbound mean=0.605,
+Wilcoxon p=0.20, t-test p=0.32, 95% CI crosses zero.
+CONCLUSION: CpG density correlates with Alu age but does not predict
+which specific young-Alu copies ERalpha binds. Ruled out as the causal
+mechanism (joining chromatin accessibility, ruled out earlier). Sample
+size for the bound group (n=88) is a real limitation - true null vs.
+underpowered null cannot be fully distinguished at this n, but two tests
+(accessibility, CpG) now point the same direction (not explanatory).
+H1's depletion finding remains real and robust; its mechanism remains
+open. Pausing further mechanism search here given time budget - moving
+to TCGA survival layer next, will revisit Alu subfamily population
+structure after.
