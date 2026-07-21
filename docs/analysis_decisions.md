@@ -266,3 +266,14 @@ H1's depletion finding remains real and robust; its mechanism remains
 open. Pausing further mechanism search here given time budget - moving
 to TCGA survival layer next, will revisit Alu subfamily population
 structure after.
+
+[2026-07] [Part 5] [Data provenance gap discovered: brca_expr_cia.tsv]
+The Part 1 CIA expression matrix (brca_expr_cia.tsv) has no documented
+source - script 01_cia_signature_score.R reads it as a pre-existing input,
+never generates it, and no earlier decision-log entry describes its origin.
+Clinical schema (SUBTYPE field, OS_STATUS "0:LIVING" format, sample ID
+pattern) strongly matches brca_tcga_pan_can_atlas_2018 on cBioPortal.
+Proceeding on that assumption for Part 5's survival layer (fresh pull,
+full gene coverage, documented query this time) rather than attempting
+to reverse-engineer the undocumented original. Recommend Part 1's
+provenance be confirmed/documented retroactively when time allows.
