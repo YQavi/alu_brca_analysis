@@ -120,3 +120,24 @@ plot_motif_comparison()
 plot_odds_ratio_forest()
 
 cat("\nAll figures written to", FIG_DIR, "\n")
+
+# ---- ATAC-seq baseline accessibility by Alu tier ----
+plot_atac_accessibility <- function(raw_csv = "atac_tier_signal.csv", set.seed_val = 42) {
+  df <- read.csv(file.path(RESULTS_DIR, raw_csv))
+  set.seed(set.seed_val)
+  df_sub <- df %>% group_by(tier) %>% slice_sample(n = 20000) %>% ungroup()
+  df_sub$tier <- factor(df_sub$tier, levels = c("young", "middle", "old"),
+                         labels = c("Young", "Middle", "Old"))
+
+  p <- ggplot(df_sub, aes(tier, signal + 1, fill = tier)) +
+    geom_violin(alpha = 0.5, trim = TRUE) +
+    geom_boxplot(width = 0.1, outlier.shape = NA) +
+    scale_y_log10() +
+    scale_fill_manual(values = c(PM_COLOR, "#7F8C8D", NM_COLOR)) +
+    labs(title = "Baseline chromatin accessibility (vehicle ATAC-seq) by Alu tier",
+         subtitle = "Means: young=2.03, middle=1.73, old=1.99 — no support for young-Alu silencing",
+         x = NULL, y = "ATAC signal + 1 (log scale)") +
+    theme_part5 + theme(legend.position = "none")
+  save_fig(p, "h4_atac_accessibility_by_tier")
+}
+plot_atac_accessibility()

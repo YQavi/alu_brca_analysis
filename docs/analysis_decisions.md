@@ -230,3 +230,21 @@ gene classification rather than relying on unavailable exact gene lists).
 This is a major finding for Part 5's narrative: the "Alu as dose-tunable
 switch linking CIA biology to STAT1/immune cooperation" story is not
 supported by the data as tested. Requires full narrative reassessment.
+
+[2026-07] [Part 5] [Mechanistic test: chromatin accessibility does NOT explain H1 depletion]
+Tested whether young-Alu ERalpha depletion (H1) is explained by baseline
+chromatin silencing, using Kim et al.'s vehicle-condition ATAC-seq
+(GSE298769, no dose applied - tests accessibility independent of ERalpha).
+n=3.48M bedGraph intervals across all Alu elements genome-wide.
+Mean signal: young=2.03, old=1.99, middle=1.73 (median=1 for all three).
+Young Alu is NOT less accessible than old Alu - if anything marginally
+more accessible. Wilcoxon tests all significant (p<2.2e-16) but
+uninformative at this n; effect sizes are the relevant read, and they
+run counter to the silencing hypothesis.
+CONCLUSION: the chromatin-accessibility/host-defense-silencing explanation
+for H1's depletion is not supported. The depletion itself remains a real,
+robust, confound-tested finding (see H1 entries above) - but its
+mechanistic explanation is still open. ERalpha avoids young Alu despite
+young Alu being chromatin-accessible at baseline, which argues for a
+more specific, sequence- or factor-level exclusion mechanism rather than
+simple heterochromatin/silencing.
