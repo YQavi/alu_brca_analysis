@@ -34,8 +34,8 @@ plot_dose_response <- function(csv = "dose_peak_counts.csv") {
     geom_col(fill = PM_COLOR, width = 0.6) +
     geom_text(aes(label = format(peak_count, big.mark = ",")), vjust = -0.5, size = 3.5) +
     scale_y_log10(labels = scales::comma) +
-    labs(title = "Dose-response: real, verified ERα peak counts",
-         x = NULL, y = "ERα peaks (standard chromosomes, log scale)") +
+    labs(title = "Dose-response: real, verified ERalpha peak counts",
+         x = NULL, y = "ERalpha peaks (standard chromosomes, log scale)") +
     theme_part5
   save_fig(p, "dose_response_peaks")
 }
@@ -56,7 +56,7 @@ plot_tier_enrichment <- function(csv = "h1_tier_enrichment.csv") {
     geom_hline(yintercept = 1, linetype = "dashed") +
     geom_text(aes(label = label), position = position_dodge(0.7), vjust = -0.5, size = 2.8) +
     scale_fill_manual(values = c(PM_COLOR, NM_COLOR)) +
-    labs(title = "H1: ERα depletion at Alu, graded by subfamily age",
+    labs(title = "H1: ERalpha depletion at Alu, graded by subfamily age",
          subtitle = "Dashed line = expected under random placement",
          x = NULL, y = "Observed / expected overlap ratio", fill = NULL) +
     ylim(0, 1.15) + theme_part5
@@ -88,7 +88,7 @@ plot_odds_ratio_forest <- function(csv = "h3_odds_ratio.csv") {
   df <- read.csv(file.path(RESULTS_DIR, csv))
   p <- ggplot(df, aes(x = odds_ratio, y = comparison)) +
     geom_vline(xintercept = 1, linetype = "dashed") +
-    geom_errorbarh(aes(xmin = ci_low, xmax = ci_high), height = 0.15, color = PM_COLOR, linewidth = 0.8) +
+    geom_errorbar(aes(xmin = ci_low, xmax = ci_high), width = 0.15, orientation = "y", color = PM_COLOR, linewidth = 0.8) +
     geom_point(size = 4, color = PM_COLOR) +
     geom_text(aes(label = sprintf("OR=%.2f  [%.2f, %.2f]  p=%.2f", odds_ratio, ci_low, ci_high, pvalue)),
               vjust = -1.3, size = 3.2) +
@@ -135,7 +135,7 @@ plot_atac_accessibility <- function(raw_csv = "atac_tier_signal.csv", set.seed_v
     scale_y_log10() +
     scale_fill_manual(values = c(PM_COLOR, "#7F8C8D", NM_COLOR)) +
     labs(title = "Baseline chromatin accessibility (vehicle ATAC-seq) by Alu tier",
-         subtitle = "Means: young=2.03, middle=1.73, old=1.99 — no support for young-Alu silencing",
+         subtitle = "Means: young=2.03, middle=1.73, old=1.99 - no support for young-Alu silencing",
          x = NULL, y = "ATAC signal + 1 (log scale)") +
     theme_part5 + theme(legend.position = "none")
   save_fig(p, "h4_atac_accessibility_by_tier")
@@ -151,7 +151,7 @@ plot_tf_comparison <- function(csv = "h7_tf_comparison_alu_tiers.csv") {
   p <- ggplot(df, aes(tier, ratio, fill = label)) +
     geom_col(position = position_dodge(0.75), width = 0.7) +
     geom_hline(yintercept = 1, linetype = "dashed") +
-    labs(title = "FOXA1 replicates ERα's young-Alu depletion; GATA3 diverges",
+    labs(title = "FOXA1 replicates ERalpha's young-Alu depletion; GATA3 diverges",
          subtitle = "Dashed line = expected under random genome-wide placement",
          x = NULL, y = "Observed / expected overlap ratio", fill = NULL) +
     theme_part5
@@ -172,7 +172,7 @@ plot_subfamily_forest <- function(csv = "h7b_subfamily_enrichment.csv", min_bp =
                         labels = c("ns", "FDR<0.05"), name = NULL) +
     scale_x_log10() +
     labs(title = "Subfamily-resolved Alu enrichment (nM* peaks)",
-         subtitle = "Subfamilies with ≥1Mbp genome coverage; dashed line = expected",
+         subtitle = "Subfamilies with >=1Mbp genome coverage; dashed line = expected",
          x = "Observed / expected ratio (log scale)", y = NULL) +
     theme_part5 + theme(axis.text.y = element_text(size = 7))
   save_fig(p, "h8_subfamily_forest", h = 7)
@@ -185,13 +185,13 @@ plot_tf_inheritance <- function(csv = "h9_tf_subfamily_comparison.csv") {
   df$subfamily <- factor(df$subfamily, levels = c("AluY", "AluSc", "AluJr4"))
   df$dose_group <- factor(df$dose_group, levels = c("pM_star", "nM_star"),
                            labels = c("pM* (10+100pM)", "nM* (1+10nM)"))
-  df$factor <- factor(df$factor, levels = c("ERalpha", "FOXA1"), labels = c("ERα", "FOXA1"))
+  df$factor <- factor(df$factor, levels = c("ERalpha", "FOXA1"), labels = c("ERalpha", "FOXA1"))
 
   p <- ggplot(df, aes(subfamily, ratio, fill = factor)) +
     geom_col(position = position_dodge(0.7), width = 0.6) +
     geom_hline(yintercept = 1, linetype = "dashed") +
     facet_wrap(~dose_group) +
-    scale_fill_manual(values = c("ERα" = PM_COLOR, "FOXA1" = "#7F8C8D")) +
+    scale_fill_manual(values = c("ERalpha" = PM_COLOR, "FOXA1" = "#7F8C8D")) +
     labs(title = "AluY exclusion is FOXA1-inherited; AluJr4 enrichment is not",
          subtitle = "Dashed line = expected under random placement",
          x = NULL, y = "Observed / expected overlap ratio", fill = NULL) +
