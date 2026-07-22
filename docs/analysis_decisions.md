@@ -364,3 +364,15 @@ and unbound in both subfamilies, since most Alu copies are intronic
 regardless of binding status. Wrong metric for the question; would need
 intronic/intergenic classification or TSS-distance to be meaningful.
 Not pursued further given time budget.
+
+[2026-07] [Part 5] [H9 formalized: structured data + figures saved]
+FOXA1-vs-ERalpha subfamily comparison and sequence composition data
+written to h9_tf_subfamily_comparison.csv / h9_sequence_composition.csv,
+figures generated (h9_tf_inheritance_by_subfamily, h9_sequence_composition).
+This is the mechanistic centerpiece figure for the write-up: AluY exclusion
+ratio nearly matches between ERalpha (0.40-0.42) and FOXA1 (0.52-0.54) -
+FOXA1-inherited. AluJr4 enrichment is ERalpha-specific (ERalpha 0.46-1.90,
+FOXA1 stays near-neutral 0.85-0.92) - NOT FOXA1-inherited. AluSc shows an
+intermediate pattern - FOXA1 depletion present (0.63) but weaker than
+ERalpha's own (0.11-0.43), suggesting ERalpha adds exclusion beyond what
+FOXA1 alone accounts for.

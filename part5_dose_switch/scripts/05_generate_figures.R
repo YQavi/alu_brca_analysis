@@ -141,3 +141,81 @@ plot_atac_accessibility <- function(raw_csv = "atac_tier_signal.csv", set.seed_v
   save_fig(p, "h4_atac_accessibility_by_tier")
 }
 plot_atac_accessibility()
+
+plot_tf_comparison <- function(csv = "h7_tf_comparison_alu_tiers.csv") {
+  df <- read.csv(file.path(RESULTS_DIR, csv))
+  df$tier <- factor(df$tier, levels = c("young","middle","old"),
+                     labels = c("Young","Middle","Old"))
+  df$label <- paste0(df$factor, "_", df$dose)
+
+  p <- ggplot(df, aes(tier, ratio, fill = label)) +
+    geom_col(position = position_dodge(0.75), width = 0.7) +
+    geom_hline(yintercept = 1, linetype = "dashed") +
+    labs(title = "FOXA1 replicates ERα's young-Alu depletion; GATA3 diverges",
+         subtitle = "Dashed line = expected under random genome-wide placement",
+         x = NULL, y = "Observed / expected overlap ratio", fill = NULL) +
+    theme_part5
+  save_fig(p, "h7_tf_alu_tier_comparison", w = 7.5)
+}
+plot_tf_comparison()
+
+plot_subfamily_forest <- function(csv = "h7b_subfamily_enrichment.csv", min_bp = 1e6) {
+  df <- read.csv(file.path(RESULTS_DIR, csv)) %>%
+    filter(bp >= min_bp) %>%   # drop ultra-rare subfamilies with unstable estimates
+    mutate(sig = nM_fdr < 0.05,
+           subfamily = reorder(subfamily, nM_ratio))
+
+  p <- ggplot(df, aes(nM_ratio, subfamily, color = sig)) +
+    geom_vline(xintercept = 1, linetype = "dashed") +
+    geom_point(size = 2.5) +
+    scale_color_manual(values = c(`TRUE` = "#E67E22", `FALSE` = "grey60"),
+                        labels = c("ns", "FDR<0.05"), name = NULL) +
+    scale_x_log10() +
+    labs(title = "Subfamily-resolved Alu enrichment (nM* peaks)",
+         subtitle = "Subfamilies with ≥1Mbp genome coverage; dashed line = expected",
+         x = "Observed / expected ratio (log scale)", y = NULL) +
+    theme_part5 + theme(axis.text.y = element_text(size = 7))
+  save_fig(p, "h8_subfamily_forest", h = 7)
+}
+plot_subfamily_forest()
+
+# ---- H9: ERalpha vs FOXA1 inheritance, per subfamily ----
+plot_tf_inheritance <- function(csv = "h9_tf_subfamily_comparison.csv") {
+  df <- read.csv(file.path(RESULTS_DIR, csv))
+  df$subfamily <- factor(df$subfamily, levels = c("AluY", "AluSc", "AluJr4"))
+  df$dose_group <- factor(df$dose_group, levels = c("pM_star", "nM_star"),
+                           labels = c("pM* (10+100pM)", "nM* (1+10nM)"))
+  df$factor <- factor(df$factor, levels = c("ERalpha", "FOXA1"), labels = c("ERα", "FOXA1"))
+
+  p <- ggplot(df, aes(subfamily, ratio, fill = factor)) +
+    geom_col(position = position_dodge(0.7), width = 0.6) +
+    geom_hline(yintercept = 1, linetype = "dashed") +
+    facet_wrap(~dose_group) +
+    scale_fill_manual(values = c("ERα" = PM_COLOR, "FOXA1" = "#7F8C8D")) +
+    labs(title = "AluY exclusion is FOXA1-inherited; AluJr4 enrichment is not",
+         subtitle = "Dashed line = expected under random placement",
+         x = NULL, y = "Observed / expected overlap ratio", fill = NULL) +
+    theme_part5
+  save_fig(p, "h9_tf_inheritance_by_subfamily", w = 8, h = 5)
+}
+plot_tf_inheritance()
+
+# ---- H9: sequence composition, AluY vs AluSc (both tested to be non-explanatory) ----
+plot_seq_composition <- function(csv = "h9_sequence_composition.csv") {
+  df <- read.csv(file.path(RESULTS_DIR, csv))
+  df_long <- df %>%
+    tidyr::pivot_longer(c(gc_pct, cpg_oe), names_to = "metric", values_to = "value") %>%
+    mutate(metric = factor(metric, levels = c("gc_pct", "cpg_oe"),
+                            labels = c("GC content", "CpG obs/exp ratio")))
+
+  p <- ggplot(df_long, aes(subfamily, value, fill = subfamily)) +
+    geom_col(width = 0.5) +
+    facet_wrap(~metric, scales = "free_y") +
+    scale_fill_manual(values = c(PM_COLOR, "#7F8C8D")) +
+    labs(title = "Sequence composition does not explain differential depletion",
+         subtitle = "AluSc is more depleted than AluY despite lower CpG content",
+         x = NULL, y = NULL) +
+    theme_part5 + theme(legend.position = "none")
+  save_fig(p, "h9_sequence_composition", w = 6.5, h = 4.5)
+}
+plot_seq_composition()
