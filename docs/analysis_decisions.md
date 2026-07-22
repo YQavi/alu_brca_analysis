@@ -341,3 +341,26 @@ opposite direction. This refines but does not overturn H1: reframe
 going forward should reference AluY/AluSc specifically rather than
 "young Alu" as a blanket category, since several other young subfamilies
 (Ya5, Yb8, Ym1, etc.) had too few peaks for reliable individual testing.
+
+[2026-07] [Part 5] [H9: FOXA1 subfamily-level + sequence + positional follow-ups]
+FOXA1 at AluY/AluSc/AluJr4 (expected from bp fraction, observed from real peaks):
+  AluY: ratio 0.52(pM)/0.54(nM) - closely matches ERalpha's own AluY depletion
+    (0.40/0.42) - confirms AluY exclusion is FOXA1/pioneer-factor-inherited.
+  AluSc: ratio 0.63(pM)/0.63(nM) - FOXA1 depletion present but WEAKER than
+    ERalpha's own AluSc depletion (0.11/0.43) - suggests ERalpha adds
+    additional exclusion at AluSc beyond what FOXA1 alone explains.
+  AluJr4: ratio 0.85(pM)/0.92(nM) - near-neutral, FOXA1 does NOT show the
+    enrichment ERalpha shows at nM (1.90x) - AluJr4 enrichment is
+    ERalpha/GATA3-specific, not FOXA1-inherited.
+Sequence composition: AluY GC=54.2%/CpGoe=0.595, AluSc GC=51.8%/CpGoe=0.431 -
+both unremarkable relative to their own tier averages; AluSc's stronger
+depletion is NOT explained by elevated CpG (it's lower than AluY's, yet
+more depleted) - further weakens CpG as an explanation.
+Chromosomal distribution: no dramatic single-chromosome hotspot for either
+subfamily; mild chr19 skew noted but underpowered (AluSc bound n=20) to
+treat as confident.
+Distance-to-nearest-gene test: UNINFORMATIVE - median=0 for both bound
+and unbound in both subfamilies, since most Alu copies are intronic
+regardless of binding status. Wrong metric for the question; would need
+intronic/intergenic classification or TSS-distance to be meaningful.
+Not pursued further given time budget.
