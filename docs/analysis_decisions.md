@@ -277,3 +277,67 @@ Proceeding on that assumption for Part 5's survival layer (fresh pull,
 full gene coverage, documented query this time) rather than attempting
 to reverse-engineer the undocumented original. Recommend Part 1's
 provenance be confirmed/documented retroactively when time allows.
+
+[2026-07] [Part 5] [H6 RESULT: no survival association for Alu-proximal or Alu-distal ERalpha-target genes]
+TCGA BRCA PanCancer Atlas 2018 (n=1082 samples, 151 events), gene sets
+defined as nearest genes to real ERalpha peaks that do/don't overlap Alu
+elements (combined pM*+nM* peak set, n=13,144 total peaks -> 1,229
+Alu-proximal / 7,948 Alu-distal genes by bedtools closest; 633/3,492
+matched to TCGA expression after gene-symbol resolution, 5083/8486
+overall symbol resolution rate).
+Cox PH (continuous z-scored gene-set mean score):
+  Alu-proximal: HR=0.97 [0.18,5.27] p=0.97, concordance=0.566
+  Alu-distal:   HR=0.87 [0.12,6.29] p=0.89, concordance=0.548
+Both null - no survival signal in either direction, wide CIs, concordance
+near chance level (0.5). Data provenance note: brca_expr_cia.tsv's
+original source was undocumented (see earlier entry); this analysis used
+a freshly-pulled, documented cBioPortal query (brca_tcga_pan_can_atlas_2018)
+instead, resolving that gap for this specific analysis at least.
+CONCLUSION: H6 (survival layer of option 4) not supported. Completes the
+full downstream test battery for Part 5: H1 (real depletion, mechanism
+unexplained after 2 tests), H2 (no motif differential), H3 (no CIA gene
+overlap), H6 (no survival association). The sole positive, robust finding
+remains H1's age-graded ERalpha depletion at Alu elements - real,
+confound-tested twice, but without an identified downstream consequence
+or upstream mechanism at this point.
+
+[2026-07] [Part 5] [H7 RESULT: FOXA1 replicates ERalpha's Alu depletion; GATA3 does not]
+Same tiered-Alu overlap test (H1's method) applied to FOXA1 and GATA3
+peaks (bigwig-derived, matched vehicle input, calibrated qpois cutoff
+c=5 - peak totals cross-checked against Kim et al. Fig S5B, same order
+of magnitude: FOXA1 41.8k/47.0k here vs their 51.7k/39.5k(10pM/10nM);
+GATA3 9.1k/11.9k here vs their 8.4k/7.3k).
+FOXA1: young=0.54-0.55x, middle=0.71-0.74x, old=0.95-0.97x - nearly
+identical graded depletion pattern to ERalpha's original H1 result.
+GATA3: young=0.67-0.73x (weaker depletion), middle=0.71-1.16x, old=
+1.13-1.68x (ENRICHED, especially at nM dose) - opposite pattern from
+FOXA1/ERalpha at the old-Alu tier.
+CONCLUSION: young-Alu depletion is NOT ERalpha-specific - FOXA1 (the
+pioneer factor that opens chromatin ahead of ERalpha) shows the same
+pattern, suggesting the exclusion originates at or before the chromatin-
+opening stage rather than being a property of ERalpha's own DNA binding
+preference. This reframes H1: the interesting biology may be "why do
+FOXA1/ERalpha avoid young Alu" (a pioneer-factor-level question) rather
+than "why does ERalpha specifically avoid young Alu." GATA3's divergent
+pattern (enrichment at old Alu) is a separate, real factor-specific
+finding worth its own note.
+
+[2026-07] [Part 5] [H8 RESULT: subfamily-resolved breakdown - AluY and AluSc drive depletion, AluJr4 reverses]
+49 subfamilies tested individually (BH-FDR corrected across all), vs
+pM*/nM* merged peaks. Significant after FDR<0.05:
+  AluY (young, 33.4Mbp, largest young subfamily): pM ratio=0.40 FDR=0.015,
+    nM ratio=0.42 FDR=6.7e-14 - main driver of H1's original signal.
+  AluSc (middle/AluS lineage): pM ratio=0.11 FDR=0.030, nM ratio=0.43
+    FDR=3.5e-4 - depletion as strong as AluY despite NOT being young.
+  AluJo (old/AluJ lineage): pM ratio=0.30 FDR=0.030 only (not sig at nM).
+  AluJr4 (old/AluJ lineage): nM ratio=1.90 FDR=2.6e-3 - ENRICHED, the
+    one reversal in the dataset.
+All other ~45 subfamilies non-significant after correction (many have
+very low peak counts / low statistical power at this resolution).
+CONCLUSION: depletion is not a uniform function of Alu age - it is real
+and strong in AluY specifically (not "young Alu" broadly) and in AluSc
+(a non-young subfamily), with AluJr4 as a genuine exception in the
+opposite direction. This refines but does not overturn H1: reframe
+going forward should reference AluY/AluSc specifically rather than
+"young Alu" as a blanket category, since several other young subfamilies
+(Ya5, Yb8, Ym1, etc.) had too few peaks for reliable individual testing.
