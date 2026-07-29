@@ -408,3 +408,16 @@ not MCF-7; its MCF-7 component was a HIF-2alpha overexpression RNA-seq
 experiment, not a speckle map. Tabled pending either a real MCF-7 dataset
 becoming available or a deliberate decision to use a cross-cell-line
 proxy with explicit caveats.
+
+[2026-07] [Part 2] [CORRECTION: 10nM standalone peak count was miscalculated]
+The individual-dose 10nM peak count was reported as 13,118 in earlier
+entries and figures. Re-verified: grep -cE "^chr..." (standard chromosomes)
+= 13,129; grep -vcE (alt scaffolds) = 11. The correct standard-chromosome
+count is 13,129 - the earlier 13,118 came from incorrectly subtracting
+the 11 alt-scaffold peaks from what was already the filtered/standard
+count, not from a file total. Corrected in dose_peak_counts.csv and
+regenerated dose_response_peaks figure.
+Scope of impact: narrow. This only affected the standalone dose-response
+panel/figure. All H1/H2/H7/H8/H9 statistical results used the separately
+and correctly computed nM_star_merged.bed total (13,142, from wc -l on
+the actual merged file) - those are unaffected by this error.
