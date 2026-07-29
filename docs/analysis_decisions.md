@@ -376,3 +376,19 @@ FOXA1 stays near-neutral 0.85-0.92) - NOT FOXA1-inherited. AluSc shows an
 intermediate pattern - FOXA1 depletion present (0.63) but weaker than
 ERalpha's own (0.11-0.43), suggesting ERalpha adds exclusion beyond what
 FOXA1 alone accounts for.
+
+[2026-07] [Part 2] [New extension scoped: strong/weak enhancer classification + Alu mapping]
+Following completion of the H1-H9 mechanism-testing arc, scoping a new
+extension using Kim et al. 2026's dose-resolved ATAC-seq (GSE298769),
+H3K27ac ChIP-seq (part of GSE298767), and PRO-seq (GSE298770, availability
+pending check) to classify strong vs. weak ERalpha-associated enhancers
+across all 4 doses, then map Alu subfamily enrichment nearby using
+existing infrastructure (alu_young/middle/old.bed, 49-subfamily set).
+A third phase (nuclear speckle spatialization via Alu eRNA) was scoped
+but tabled: no MCF-7-specific nuclear speckle proximity map (SON TSA-seq/
+CUT&RUN) exists in public data - the one candidate paper found (Alexander
+et al. 2025, Nat Cell Biol) ran genome-wide speckle assays in 786-O cells,
+not MCF-7; its MCF-7 component was a HIF-2alpha overexpression RNA-seq
+experiment, not a speckle map. Tabled pending either a real MCF-7 dataset
+becoming available or a deliberate decision to use a cross-cell-line
+proxy with explicit caveats.
