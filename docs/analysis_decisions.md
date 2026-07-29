@@ -421,3 +421,22 @@ Scope of impact: narrow. This only affected the standalone dose-response
 panel/figure. All H1/H2/H7/H8/H9 statistical results used the separately
 and correctly computed nM_star_merged.bed total (13,142, from wc -l on
 the actual merged file) - those are unaffected by this error.
+
+[2026-07] [Part 2] [H10: enhancer strength x Alu tier, FDR-corrected]
+Classified strong/weak ERalpha-associated enhancers per dose via composite
+z-scored ATAC+H3K27ac+PROseq signal (terciles), then tested Alu tier
+overlap (strong vs weak) via Fisher's exact, 9 tests (3 doses x 3 tiers,
+10pM excluded - too few peaks, n=33/tier). BH-FDR applied across all 9.
+RESULT: only 10nM/middle survives correction (OR=1.36, FDR=0.009,
+Bonferroni=0.009 - robust). The 100pM/middle result that looked
+suggestive pre-correction (raw p=0.022) does NOT survive (FDR=0.099) -
+confirms this was likely a false positive from insufficient correction,
+caught specifically because multiple-testing correction was checked
+rather than assumed.
+CONCLUSION: narrow but real extension of H1/H8 - enhancer strength has
+a detectable relationship to Alu tier composition specifically at the
+highest dose (10nM) and specifically for middle-tier (AluS-lineage) Alu,
+not a broad cross-dose pattern. Young-tier (AluY) depletion itself shows
+no strong/weak difference at any dose - consistent with H1's exclusion
+being set at a stage upstream of, and independent from, how strong the
+resulting enhancer becomes.

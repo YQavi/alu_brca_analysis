@@ -219,3 +219,22 @@ plot_seq_composition <- function(csv = "h9_sequence_composition.csv") {
   save_fig(p, "h9_sequence_composition", w = 6.5, h = 4.5)
 }
 plot_seq_composition()
+
+plot_enhancer_alu_forest <- function(csv = "h10_enhancer_alu_fdr.csv") {
+  df <- read.csv(file.path(RESULTS_DIR, csv))
+  df$label <- paste0(df$dose, " / ", df$alu_tier)
+  df$label <- factor(df$label, levels = rev(df$label[order(df$dose, df$alu_tier)]))
+  df$sig <- factor(ifelse(df$significant, "FDR < 0.05", "ns"), levels = c("ns", "FDR < 0.05"))
+
+  p <- ggplot(df, aes(odds_ratio, label, color = sig)) +
+    geom_vline(xintercept = 1, linetype = "dashed") +
+    geom_point(size = 3) +
+    scale_color_manual(values = c("ns" = "grey60", "FDR < 0.05" = NM_COLOR)) +
+    scale_x_log10() +
+    labs(title = "Strong vs. weak enhancers: Alu tier overlap, by dose",
+         subtitle = "Odds ratio, strong/weak; only 10nM-middle survives FDR correction (9 tests)",
+         x = "Odds ratio (log scale)", y = NULL, color = NULL) +
+    theme_part5 + theme(axis.text.y = element_text(size = 9))
+  save_fig(p, "h10_enhancer_alu_forest", h = 5)
+}
+plot_enhancer_alu_forest()
