@@ -18,3 +18,10 @@ __pycache__/
 # R temporary files
 .Rhistory
 .RData
+
+# Large regenerable intermediates that don't belong in git regardless of directory
+**/salmon_quant/**
+**/fimo_results/**/*.gff
+**/fimo_results/**/*.xml
+**/alu_survival_expr_raw.json
+**/alu_survival_expr_long.tsv

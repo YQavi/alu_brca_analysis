@@ -1,0 +1,107 @@
+INFO  @ 16 Jul 2026 18:43:29: [34 MB] 
+# Command line: callpeak -t /home/yq139/alu_brca/part5_dose_switch/data/processed/ER_10pM_sorted.bam -c /home/yq139/alu_brca/part5_dose_switch/data/processed/ER_10pM_input_sorted.bam -f BAM -g hs -n ER_10pM_real -q 0.05 --outdir /home/yq139/alu_brca/part5_dose_switch/results/macs_real
+# ARGUMENTS LIST:
+# name = ER_10pM_real
+# format = BAM
+# ChIP-seq file = ['/home/yq139/alu_brca/part5_dose_switch/data/processed/ER_10pM_sorted.bam']
+# control file = ['/home/yq139/alu_brca/part5_dose_switch/data/processed/ER_10pM_input_sorted.bam']
+# effective genome size = 2.91e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# The maximum gap between significant sites is assigned as the read length/tag size.
+# The minimum length of peaks is assigned as the predicted fragment length "d".
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 1000 bps and 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+ 
+INFO  @ 16 Jul 2026 18:43:29: [34 MB] #1 read tag files... 
+INFO  @ 16 Jul 2026 18:43:29: [34 MB] #1 read treatment tags... 
+INFO  @ 16 Jul 2026 18:43:32: [64 MB]  1000000 reads parsed 
+INFO  @ 16 Jul 2026 18:43:35: [71 MB]  2000000 reads parsed 
+INFO  @ 16 Jul 2026 18:43:38: [75 MB]  3000000 reads parsed 
+INFO  @ 16 Jul 2026 18:43:41: [82 MB]  4000000 reads parsed 
+INFO  @ 16 Jul 2026 18:43:44: [83 MB]  5000000 reads parsed 
+INFO  @ 16 Jul 2026 18:43:47: [92 MB]  6000000 reads parsed 
+INFO  @ 16 Jul 2026 18:43:50: [94 MB]  7000000 reads parsed 
+INFO  @ 16 Jul 2026 18:43:53: [95 MB]  8000000 reads parsed 
+INFO  @ 16 Jul 2026 18:43:56: [102 MB]  9000000 reads parsed 
+INFO  @ 16 Jul 2026 18:43:59: [114 MB]  10000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:02: [118 MB]  11000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:05: [118 MB]  12000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:08: [122 MB]  13000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:11: [122 MB]  14000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:14: [132 MB]  15000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:17: [135 MB]  16000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:20: [135 MB]  17000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:23: [143 MB]  18000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:26: [143 MB]  19000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:29: [158 MB]  20000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:32: [160 MB]  21000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:35: [161 MB]  22000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:38: [166 MB]  23000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:41: [166 MB]  24000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:44: [166 MB]  25000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:47: [180 MB]  26000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:50: [180 MB]  27000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:53: [180 MB]  28000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:56: [180 MB]  29000000 reads parsed 
+INFO  @ 16 Jul 2026 18:44:59: [196 MB]  30000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:02: [199 MB]  31000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:05: [199 MB]  32000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:08: [202 MB]  33000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:11: [203 MB]  34000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:14: [206 MB]  35000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:17: [206 MB]  36000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:20: [214 MB]  37000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:23: [214 MB]  38000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:26: [216 MB]  39000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:29: [225 MB]  40000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:32: [226 MB]  41000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:35: [234 MB]  42000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:38: [248 MB]  43000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:38: [261 MB] 43022881 reads have been read. 
+INFO  @ 16 Jul 2026 18:45:38: [261 MB] #1.2 read input tags... 
+INFO  @ 16 Jul 2026 18:45:41: [276 MB]  1000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:44: [280 MB]  2000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:47: [285 MB]  3000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:51: [290 MB]  4000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:54: [294 MB]  5000000 reads parsed 
+INFO  @ 16 Jul 2026 18:45:57: [298 MB]  6000000 reads parsed 
+INFO  @ 16 Jul 2026 18:46:00: [304 MB]  7000000 reads parsed 
+INFO  @ 16 Jul 2026 18:46:03: [309 MB]  8000000 reads parsed 
+INFO  @ 16 Jul 2026 18:46:06: [314 MB]  9000000 reads parsed 
+INFO  @ 16 Jul 2026 18:46:09: [317 MB]  10000000 reads parsed 
+INFO  @ 16 Jul 2026 18:46:11: [339 MB] 10634476 reads have been read. 
+INFO  @ 16 Jul 2026 18:46:11: [339 MB] #1 tag size is determined as 100 bps 
+INFO  @ 16 Jul 2026 18:46:11: [339 MB] #1 tag size = 100.0 
+INFO  @ 16 Jul 2026 18:46:11: [339 MB] #1  total tags in treatment: 43022881 
+INFO  @ 16 Jul 2026 18:46:11: [339 MB] #1 user defined the maximum tags... 
+INFO  @ 16 Jul 2026 18:46:11: [339 MB] #1 filter out redundant tags at the same location and the same strand by allowing at most 1 tag(s) 
+INFO  @ 16 Jul 2026 18:46:20: [407 MB] #1  tags after filtering in treatment: 34935048 
+INFO  @ 16 Jul 2026 18:46:20: [407 MB] #1  Redundant rate of treatment: 0.19 
+INFO  @ 16 Jul 2026 18:46:20: [407 MB] #1  total tags in control: 10634476 
+INFO  @ 16 Jul 2026 18:46:20: [407 MB] #1 user defined the maximum tags... 
+INFO  @ 16 Jul 2026 18:46:20: [407 MB] #1 filter out redundant tags at the same location and the same strand by allowing at most 1 tag(s) 
+INFO  @ 16 Jul 2026 18:46:23: [453 MB] #1  tags after filtering in control: 9042664 
+INFO  @ 16 Jul 2026 18:46:23: [453 MB] #1  Redundant rate of control: 0.15 
+INFO  @ 16 Jul 2026 18:46:23: [453 MB] #1 finished! 
+INFO  @ 16 Jul 2026 18:46:23: [453 MB] #2 Build Peak Model... 
+INFO  @ 16 Jul 2026 18:46:23: [453 MB] #2 looking for paired plus/minus strand peaks... 
+INFO  @ 16 Jul 2026 18:46:37: [480 MB] #2 Total number of paired peaks: 1091 
+INFO  @ 16 Jul 2026 18:46:39: [480 MB] #2 Model building with cross-correlation: Done 
+INFO  @ 16 Jul 2026 18:46:39: [480 MB] #2 finished! 
+INFO  @ 16 Jul 2026 18:46:39: [480 MB] #2 predicted fragment length is 183 bps 
+INFO  @ 16 Jul 2026 18:46:39: [480 MB] #2 alternative fragment length(s) may be 183,219 bps 
+INFO  @ 16 Jul 2026 18:46:39: [480 MB] #2.2 Generate R script for model : /home/yq139/alu_brca/part5_dose_switch/results/macs_real/ER_10pM_real_model.r 
+WARNING @ 16 Jul 2026 18:46:39: [480 MB] #2 Since the d (183) calculated from paired-peaks are smaller than 2*tag length, it may be influenced by unknown sequencing problem! 
+WARNING @ 16 Jul 2026 18:46:39: [480 MB] #2 You may need to consider one of the other alternative d(s): 183,219 
+WARNING @ 16 Jul 2026 18:46:39: [480 MB] #2 You can restart the process with --nomodel --extsize XXX with your choice or an arbitrary number. Nontheless, MACS will continute computing. 
+INFO  @ 16 Jul 2026 18:46:39: [480 MB] #3 Call peaks... 
+INFO  @ 16 Jul 2026 18:46:39: [480 MB] #3 Pre-compute pvalue-qvalue table... 
+INFO  @ 16 Jul 2026 18:50:00: [1039 MB] #3 Call peaks for each chromosome... 
+INFO  @ 16 Jul 2026 18:50:39: [1039 MB] #4 Write output xls file... /home/yq139/alu_brca/part5_dose_switch/results/macs_real/ER_10pM_real_peaks.xls 
+INFO  @ 16 Jul 2026 18:50:39: [1039 MB] #4 Write peak in narrowPeak format file... /home/yq139/alu_brca/part5_dose_switch/results/macs_real/ER_10pM_real_peaks.narrowPeak 
+INFO  @ 16 Jul 2026 18:50:39: [1039 MB] #4 Write summits bed file... /home/yq139/alu_brca/part5_dose_switch/results/macs_real/ER_10pM_real_summits.bed 
+INFO  @ 16 Jul 2026 18:50:39: [1039 MB] Done! 

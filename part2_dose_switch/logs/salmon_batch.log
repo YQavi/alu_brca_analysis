@@ -1,0 +1,723 @@
+nohup: ignoring input
+=== Skipping SRX29017826 (SRR33796176) - already quantified ===
+=== Processing SRX29017827 (SRR33796165) ===
+2026-07-18T20:23:49 prefetch.3.4.1: 1) Resolving 'SRR33796165'...
+2026-07-18T20:23:49 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T20:23:49 prefetch.3.4.1: 1) Downloading 'SRR33796165'...
+2026-07-18T20:23:49 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T20:23:49 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T20:24:21 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T20:24:24 prefetch.3.4.1:  'SRR33796165' is valid: 1300486659 bytes were streamed from 1300481463
+2026-07-18T20:24:24 prefetch.3.4.1: 1) 'SRR33796165' was downloaded successfully
+2026-07-18T20:24:24 prefetch.3.4.1: 1) Resolving 'SRR33796165's dependencies...
+2026-07-18T20:24:24 prefetch.3.4.1: 'SRR33796165' has 0 unresolved dependencies
+spots read      : 39,997,509
+reads read      : 39,997,509
+reads written   : 39,997,509
+[2m2026-07-18T20:25:27.203293Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T20:25:27.215954Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T20:25:46.078514Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T20:25:46.078578Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T20:26:04.111664Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T20:26:04.111783Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T20:26:04.614305Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T20:26:04.614367Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T20:26:07.316301Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T20:26:07.316515Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T20:26:31.621808Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m64.411871604
+[2m2026-07-18T20:26:31.643043Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T20:38:15.832335Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 35381519 / 39997509 fragments (88.46%)
+[2m2026-07-18T20:38:15.836369Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m704.214563316
+[2m2026-07-18T20:38:17.173905Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.337535595
+[2m2026-07-18T20:38:17.174045Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T20:41:12.618768Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m175.444859529
+[2m2026-07-18T20:41:12.877313Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.258548434
+[2m2026-07-18T20:41:12.943575Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017827_SRR33796165
+[2m2026-07-18T20:41:13.523745Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.646433988
+[2m2026-07-18T20:41:13.892411Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 39997509 fragments, mapped 35381519 (88.46%), 437715 equivalence classes
+=== Done SRX29017827 - success ===
+=== Processing SRX29017834 (SRR33796166) ===
+2026-07-18T20:41:16 prefetch.3.4.1: 1) Resolving 'SRR33796166'...
+2026-07-18T20:41:16 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T20:41:16 prefetch.3.4.1: 1) Downloading 'SRR33796166'...
+2026-07-18T20:41:16 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T20:41:16 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T20:41:39 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T20:41:44 prefetch.3.4.1:  'SRR33796166' is valid: 956810140 bytes were streamed from 956807464
+2026-07-18T20:41:44 prefetch.3.4.1: 1) 'SRR33796166' was downloaded successfully
+2026-07-18T20:41:44 prefetch.3.4.1: 1) Resolving 'SRR33796166's dependencies...
+2026-07-18T20:41:44 prefetch.3.4.1: 'SRR33796166' has 0 unresolved dependencies
+spots read      : 29,962,905
+reads read      : 29,962,905
+reads written   : 29,962,905
+[2m2026-07-18T20:42:54.851683Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T20:42:54.857329Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T20:43:04.812420Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T20:43:04.812463Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T20:43:10.253180Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T20:43:10.253269Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T20:43:10.489844Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T20:43:10.489911Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T20:43:11.514589Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T20:43:11.514639Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T20:43:28.846321Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m33.98944858
+[2m2026-07-18T20:43:28.864116Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T20:50:58.590736Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 28371989 / 29962905 fragments (94.69%)
+[2m2026-07-18T20:50:58.591763Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m449.745454419
+[2m2026-07-18T20:50:59.809461Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.217694448
+[2m2026-07-18T20:50:59.809566Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T20:53:36.869495Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m157.060029698
+[2m2026-07-18T20:53:37.092139Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.222647069
+[2m2026-07-18T20:53:37.158368Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017834_SRR33796166
+[2m2026-07-18T20:53:37.594165Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.502029175
+[2m2026-07-18T20:53:37.736279Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 29962905 fragments, mapped 28371989 (94.69%), 413385 equivalence classes
+=== Done SRX29017834 - success ===
+=== Processing SRX29017836 (SRR33796164) ===
+2026-07-18T20:53:39 prefetch.3.4.1: 1) Resolving 'SRR33796164'...
+2026-07-18T20:53:39 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T20:53:39 prefetch.3.4.1: 1) Downloading 'SRR33796164'...
+2026-07-18T20:53:39 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T20:53:39 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T20:54:18 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T20:54:24 prefetch.3.4.1:  'SRR33796164' is valid: 1600291890 bytes were streamed from 1600289215
+2026-07-18T20:54:24 prefetch.3.4.1: 1) 'SRR33796164' was downloaded successfully
+2026-07-18T20:54:24 prefetch.3.4.1: 1) Resolving 'SRR33796164's dependencies...
+2026-07-18T20:54:24 prefetch.3.4.1: 'SRR33796164' has 0 unresolved dependencies
+spots read      : 50,051,930
+reads read      : 50,051,930
+reads written   : 50,051,930
+[2m2026-07-18T20:56:13.693384Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T20:56:13.716588Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T20:56:35.200569Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T20:56:35.200619Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T20:56:48.241522Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T20:56:48.241576Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T20:56:48.604659Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T20:56:48.604761Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T20:56:50.719481Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T20:56:50.719578Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T20:57:09.638995Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m55.926281689
+[2m2026-07-18T20:57:09.654360Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T21:10:38.736102Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 47109340 / 50051930 fragments (94.12%)
+[2m2026-07-18T21:10:38.739927Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m809.100940315
+[2m2026-07-18T21:10:40.200589Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.460658175
+[2m2026-07-18T21:10:40.200644Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T21:13:57.577320Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m197.376682085
+[2m2026-07-18T21:13:57.857265Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.279994389
+[2m2026-07-18T21:13:57.927725Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017836_SRR33796164
+[2m2026-07-18T21:13:58.379055Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.521791777
+[2m2026-07-18T21:13:58.673319Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 50051930 fragments, mapped 47109340 (94.12%), 475964 equivalence classes
+=== Done SRX29017836 - success ===
+=== Processing SRX29017837 (SRR33796167) ===
+2026-07-18T21:14:00 prefetch.3.4.1: 1) Resolving 'SRR33796167'...
+2026-07-18T21:14:01 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T21:14:01 prefetch.3.4.1: 1) Downloading 'SRR33796167'...
+2026-07-18T21:14:01 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T21:14:01 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T21:14:16 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T21:14:17 prefetch.3.4.1:  'SRR33796167' is valid: 635285983 bytes were streamed from 635273465
+2026-07-18T21:14:17 prefetch.3.4.1: 1) 'SRR33796167' was downloaded successfully
+2026-07-18T21:14:17 prefetch.3.4.1: 1) Resolving 'SRR33796167's dependencies...
+2026-07-18T21:14:17 prefetch.3.4.1: 'SRR33796167' has 0 unresolved dependencies
+spots read      : 19,152,795
+reads read      : 19,152,795
+reads written   : 19,152,795
+[2m2026-07-18T21:14:39.978243Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T21:14:39.980920Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T21:14:43.660948Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T21:14:43.660998Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T21:14:46.499365Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T21:14:46.499408Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T21:14:46.604342Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T21:14:46.604401Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T21:14:47.091667Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T21:14:47.091718Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T21:14:53.848018Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m13.867342192
+[2m2026-07-18T21:14:53.867879Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T21:20:25.874947Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 15960430 / 19152795 fragments (83.33%)
+[2m2026-07-18T21:20:25.875090Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m332.027083037
+[2m2026-07-18T21:20:27.400141Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.52504316
+[2m2026-07-18T21:20:27.400276Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T21:23:04.024395Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m156.624250502
+[2m2026-07-18T21:23:04.212402Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.188011345
+[2m2026-07-18T21:23:04.286628Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017837_SRR33796167
+[2m2026-07-18T21:23:04.816507Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.604106585
+[2m2026-07-18T21:23:05.032334Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 19152795 fragments, mapped 15960430 (83.33%), 342786 equivalence classes
+=== Done SRX29017837 - success ===
+=== Processing SRX29017838 (SRR33796163) ===
+2026-07-18T21:23:06 prefetch.3.4.1: 1) Resolving 'SRR33796163'...
+2026-07-18T21:23:06 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T21:23:07 prefetch.3.4.1: 1) Downloading 'SRR33796163'...
+2026-07-18T21:23:07 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T21:23:07 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T21:23:25 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T21:23:27 prefetch.3.4.1:  'SRR33796163' is valid: 789278513 bytes were streamed from 789272465
+2026-07-18T21:23:27 prefetch.3.4.1: 1) 'SRR33796163' was downloaded successfully
+2026-07-18T21:23:27 prefetch.3.4.1: 1) Resolving 'SRR33796163's dependencies...
+2026-07-18T21:23:27 prefetch.3.4.1: 'SRR33796163' has 0 unresolved dependencies
+spots read      : 24,209,217
+reads read      : 24,209,217
+reads written   : 24,209,217
+[2m2026-07-18T21:24:00.354057Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T21:24:00.357153Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T21:24:11.860895Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T21:24:11.860953Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T21:24:23.730340Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T21:24:23.730391Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T21:24:24.064894Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T21:24:24.064965Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T21:24:25.875160Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T21:24:25.875259Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T21:24:40.703694Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m40.347673789
+[2m2026-07-18T21:24:40.719219Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T21:32:09.202318Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 22066934 / 24209217 fragments (91.15%)
+[2m2026-07-18T21:32:09.202387Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m448.498701556
+[2m2026-07-18T21:32:10.239398Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.037003556
+[2m2026-07-18T21:32:10.239463Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T21:34:24.749321Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m134.509919516
+[2m2026-07-18T21:34:24.928047Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.17873031
+[2m2026-07-18T21:34:25.001749Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017838_SRR33796163
+[2m2026-07-18T21:34:25.498730Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.570684168
+[2m2026-07-18T21:34:25.611629Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 24209217 fragments, mapped 22066934 (91.15%), 397529 equivalence classes
+=== Done SRX29017838 - success ===
+=== Processing SRX29017839 (SRR33796168) ===
+2026-07-18T21:34:27 prefetch.3.4.1: 1) Resolving 'SRR33796168'...
+2026-07-18T21:34:27 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T21:34:27 prefetch.3.4.1: 1) Downloading 'SRR33796168'...
+2026-07-18T21:34:27 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T21:34:27 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T21:34:44 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T21:34:45 prefetch.3.4.1:  'SRR33796168' is valid: 744524260 bytes were streamed from 744515445
+2026-07-18T21:34:45 prefetch.3.4.1: 1) 'SRR33796168' was downloaded successfully
+2026-07-18T21:34:45 prefetch.3.4.1: 1) Resolving 'SRR33796168's dependencies...
+2026-07-18T21:34:45 prefetch.3.4.1: 'SRR33796168' has 0 unresolved dependencies
+spots read      : 22,827,703
+reads read      : 22,827,703
+reads written   : 22,827,703
+[2m2026-07-18T21:35:13.406052Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T21:35:13.407848Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T21:35:16.230455Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T21:35:16.230504Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T21:35:17.609695Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T21:35:17.609748Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T21:35:17.690336Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T21:35:17.690421Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T21:35:17.911267Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T21:35:17.911320Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T21:35:21.754914Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m8.34712067
+[2m2026-07-18T21:35:21.770013Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T21:42:11.823039Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 20876711 / 22827703 fragments (91.45%)
+[2m2026-07-18T21:42:11.823131Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m410.068224282
+[2m2026-07-18T21:42:13.040032Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.216893941
+[2m2026-07-18T21:42:13.040091Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T21:44:36.295435Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m143.255397681
+[2m2026-07-18T21:44:36.489142Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.19371109
+[2m2026-07-18T21:44:36.661008Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017839_SRR33796168
+[2m2026-07-18T21:44:37.252047Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.762908512
+[2m2026-07-18T21:44:37.382175Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 22827703 fragments, mapped 20876711 (91.45%), 377565 equivalence classes
+=== Done SRX29017839 - success ===
+=== Processing SRX29017840 (SRR33796162) ===
+2026-07-18T21:44:39 prefetch.3.4.1: 1) Resolving 'SRR33796162'...
+2026-07-18T21:44:39 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T21:44:39 prefetch.3.4.1: 1) Downloading 'SRR33796162'...
+2026-07-18T21:44:39 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T21:44:39 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T21:44:58 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T21:45:00 prefetch.3.4.1:  'SRR33796162' is valid: 868772721 bytes were streamed from 868769444
+2026-07-18T21:45:00 prefetch.3.4.1: 1) 'SRR33796162' was downloaded successfully
+2026-07-18T21:45:00 prefetch.3.4.1: 1) Resolving 'SRR33796162's dependencies...
+2026-07-18T21:45:01 prefetch.3.4.1: 'SRR33796162' has 0 unresolved dependencies
+spots read      : 26,288,376
+reads read      : 26,288,376
+reads written   : 26,288,376
+[2m2026-07-18T21:45:34.824136Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T21:45:34.826085Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T21:45:38.288886Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T21:45:38.288938Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T21:45:39.688181Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T21:45:39.688231Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T21:45:39.770557Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T21:45:39.770632Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T21:45:39.990846Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T21:45:39.990901Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T21:45:42.902013Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m8.075988438
+[2m2026-07-18T21:45:42.910968Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T21:53:27.240851Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 22193975 / 26288376 fragments (84.43%)
+[2m2026-07-18T21:53:27.241183Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m464.33917351
+[2m2026-07-18T21:53:31.016366Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m3.775182612
+[2m2026-07-18T21:53:31.016698Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T21:56:32.548846Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m181.532470695
+[2m2026-07-18T21:56:32.825430Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.276591899
+[2m2026-07-18T21:56:32.984422Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017840_SRR33796162
+[2m2026-07-18T21:56:33.585695Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.760267985
+[2m2026-07-18T21:56:33.709428Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 26288376 fragments, mapped 22193975 (84.43%), 381890 equivalence classes
+=== Done SRX29017840 - success ===
+=== Processing SRX29017841 (SRR33796169) ===
+2026-07-18T21:56:34 prefetch.3.4.1: 1) Resolving 'SRR33796169'...
+2026-07-18T21:56:35 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T21:56:35 prefetch.3.4.1: 1) Downloading 'SRR33796169'...
+2026-07-18T21:56:35 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T21:56:35 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T21:56:51 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T21:56:53 prefetch.3.4.1:  'SRR33796169' is valid: 791398292 bytes were streamed from 791387445
+2026-07-18T21:56:53 prefetch.3.4.1: 1) 'SRR33796169' was downloaded successfully
+2026-07-18T21:56:53 prefetch.3.4.1: 1) Resolving 'SRR33796169's dependencies...
+2026-07-18T21:56:53 prefetch.3.4.1: 'SRR33796169' has 0 unresolved dependencies
+spots read      : 24,512,940
+reads read      : 24,512,940
+reads written   : 24,512,940
+[2m2026-07-18T21:57:28.057394Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T21:57:28.059368Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T21:57:31.761918Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T21:57:31.761963Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T21:57:33.874074Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T21:57:33.874128Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T21:57:33.959456Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T21:57:33.959525Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T21:57:34.189491Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T21:57:34.189549Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T21:57:38.462207Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m10.402896374000001
+[2m2026-07-18T21:57:38.471231Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T22:04:18.835917Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 22496137 / 24512940 fragments (91.77%)
+[2m2026-07-18T22:04:18.836088Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m400.373884153
+[2m2026-07-18T22:04:20.700380Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.864291216
+[2m2026-07-18T22:04:20.700457Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T22:07:46.873943Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m206.173542935
+[2m2026-07-18T22:07:47.191947Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.318021815
+[2m2026-07-18T22:07:47.334327Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017841_SRR33796169
+[2m2026-07-18T22:07:48.255925Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m1.063981884
+[2m2026-07-18T22:07:48.375763Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 24512940 fragments, mapped 22496137 (91.77%), 391632 equivalence classes
+=== Done SRX29017841 - success ===
+=== Processing SRX29017842 (SRR33796161) ===
+2026-07-18T22:07:50 prefetch.3.4.1: 1) Resolving 'SRR33796161'...
+2026-07-18T22:07:50 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T22:07:50 prefetch.3.4.1: 1) Downloading 'SRR33796161'...
+2026-07-18T22:07:50 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T22:07:50 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T22:08:34 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T22:08:38 prefetch.3.4.1:  'SRR33796161' is valid: 1864599844 bytes were streamed from 1864592443
+2026-07-18T22:08:38 prefetch.3.4.1: 1) 'SRR33796161' was downloaded successfully
+2026-07-18T22:08:38 prefetch.3.4.1: 1) Resolving 'SRR33796161's dependencies...
+2026-07-18T22:08:38 prefetch.3.4.1: 'SRR33796161' has 0 unresolved dependencies
+spots read      : 58,145,637
+reads read      : 58,145,637
+reads written   : 58,145,637
+[2m2026-07-18T22:09:55.277351Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T22:09:55.279231Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T22:09:59.333806Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T22:09:59.333851Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T22:10:09.274326Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T22:10:09.274392Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T22:10:09.628482Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T22:10:09.628564Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T22:10:11.459108Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T22:10:11.459161Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T22:10:26.885425Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m31.606261973
+[2m2026-07-18T22:10:26.901292Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T22:26:34.368757Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 53903647 / 58145637 fragments (92.70%)
+[2m2026-07-18T22:26:34.369142Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m967.483725675
+[2m2026-07-18T22:26:35.981466Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.612317067
+[2m2026-07-18T22:26:35.981515Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T22:30:20.442575Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m224.461104397
+[2m2026-07-18T22:30:20.744095Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.301522895
+[2m2026-07-18T22:30:20.903600Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017842_SRR33796161
+[2m2026-07-18T22:30:21.348270Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.604177748
+[2m2026-07-18T22:30:21.739047Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 58145637 fragments, mapped 53903647 (92.70%), 507591 equivalence classes
+=== Done SRX29017842 - success ===
+=== Processing SRX29017843 (SRR33796160) ===
+2026-07-18T22:30:25 prefetch.3.4.1: 1) Resolving 'SRR33796160'...
+2026-07-18T22:30:25 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T22:30:25 prefetch.3.4.1: 1) Downloading 'SRR33796160'...
+2026-07-18T22:30:25 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T22:30:25 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T22:30:41 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T22:30:42 prefetch.3.4.1:  'SRR33796160' is valid: 660629026 bytes were streamed from 660626465
+2026-07-18T22:30:42 prefetch.3.4.1: 1) 'SRR33796160' was downloaded successfully
+2026-07-18T22:30:42 prefetch.3.4.1: 1) Resolving 'SRR33796160's dependencies...
+2026-07-18T22:30:42 prefetch.3.4.1: 'SRR33796160' has 0 unresolved dependencies
+spots read      : 19,336,165
+reads read      : 19,336,165
+reads written   : 19,336,165
+[2m2026-07-18T22:31:10.142794Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T22:31:10.149047Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T22:31:21.967189Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T22:31:21.967235Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T22:31:23.993929Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T22:31:23.993968Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T22:31:24.092236Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T22:31:24.092317Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T22:31:24.469189Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T22:31:24.469230Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T22:31:29.536006Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m19.388117217
+[2m2026-07-18T22:31:29.545403Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T22:38:33.506305Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 14149057 / 19336165 fragments (73.17%)
+[2m2026-07-18T22:38:33.506378Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m423.970381324
+[2m2026-07-18T22:38:34.377675Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m0.871289708
+[2m2026-07-18T22:38:34.377745Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T22:41:09.757677Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m155.379991223
+[2m2026-07-18T22:41:10.142980Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.385312229
+[2m2026-07-18T22:41:10.255849Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017843_SRR33796160
+[2m2026-07-18T22:41:11.054977Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.911987222
+[2m2026-07-18T22:41:11.321979Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 19336165 fragments, mapped 14149057 (73.17%), 327218 equivalence classes
+=== Done SRX29017843 - success ===
+=== Processing SRX29017844 (SRR33796156) ===
+2026-07-18T22:41:14 prefetch.3.4.1: 1) Resolving 'SRR33796156'...
+2026-07-18T22:41:15 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T22:41:15 prefetch.3.4.1: 1) Downloading 'SRR33796156'...
+2026-07-18T22:41:15 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T22:41:15 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T22:41:37 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T22:41:41 prefetch.3.4.1:  'SRR33796156' is valid: 989441345 bytes were streamed from 989432464
+2026-07-18T22:41:41 prefetch.3.4.1: 1) 'SRR33796156' was downloaded successfully
+2026-07-18T22:41:41 prefetch.3.4.1: 1) Resolving 'SRR33796156's dependencies...
+2026-07-18T22:41:41 prefetch.3.4.1: 'SRR33796156' has 0 unresolved dependencies
+spots read      : 30,611,975
+reads read      : 30,611,975
+reads written   : 30,611,975
+[2m2026-07-18T22:42:35.777180Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T22:42:35.779414Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T22:42:39.644367Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T22:42:39.644423Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T22:42:42.963080Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T22:42:42.963137Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T22:42:43.104604Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T22:42:43.104688Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T22:42:43.666752Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T22:42:43.666811Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T22:42:52.402367Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m16.623032998
+[2m2026-07-18T22:42:52.418007Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T22:51:09.288021Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 27799728 / 30611975 fragments (90.81%)
+[2m2026-07-18T22:51:09.288107Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m496.885748276
+[2m2026-07-18T22:51:10.585642Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.297529088
+[2m2026-07-18T22:51:10.585694Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T22:54:49.002899Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m218.417239531
+[2m2026-07-18T22:54:49.262021Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.259137563
+[2m2026-07-18T22:54:49.421777Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017844_SRR33796156
+[2m2026-07-18T22:54:50.035000Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.772982485
+[2m2026-07-18T22:54:50.170144Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 30611975 fragments, mapped 27799728 (90.81%), 428086 equivalence classes
+=== Done SRX29017844 - success ===
+=== Processing SRX29017847 (SRR33796154) ===
+2026-07-18T22:54:51 prefetch.3.4.1: 1) Resolving 'SRR33796154'...
+2026-07-18T22:54:51 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T22:54:52 prefetch.3.4.1: 1) Downloading 'SRR33796154'...
+2026-07-18T22:54:52 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T22:54:52 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T22:54:53 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T22:54:53 prefetch.3.4.1:  'SRR33796154' is valid: 34085257 bytes were streamed from 34073467
+2026-07-18T22:54:53 prefetch.3.4.1: 1) 'SRR33796154' was downloaded successfully
+2026-07-18T22:54:53 prefetch.3.4.1: 1) Resolving 'SRR33796154's dependencies...
+2026-07-18T22:54:53 prefetch.3.4.1: 'SRR33796154' has 0 unresolved dependencies
+spots read      : 1,034,192
+reads read      : 1,034,192
+reads written   : 1,034,192
+[2m2026-07-18T22:54:55.221589Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T22:54:55.223452Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T22:54:59.747416Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T22:54:59.747470Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T22:55:02.115733Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T22:55:02.115786Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T22:55:02.198771Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T22:55:02.198853Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T22:55:02.698927Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T22:55:02.698985Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T22:55:06.019298Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m10.795899347
+[2m2026-07-18T22:55:06.028512Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T22:55:24.461689Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 915685 / 1034192 fragments (88.54%)
+[2m2026-07-18T22:55:24.461750Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m18.442462204
+[2m2026-07-18T22:55:24.793196Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m0.331437833
+[2m2026-07-18T22:55:24.793285Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T22:56:07.078646Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m42.285449018
+[2m2026-07-18T22:56:07.125427Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.046782714
+[2m2026-07-18T22:56:07.199615Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017847_SRR33796154
+[2m2026-07-18T22:56:07.645694Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.520268417
+[2m2026-07-18T22:56:07.710899Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 1034192 fragments, mapped 915685 (88.54%), 131407 equivalence classes
+=== Done SRX29017847 - success ===
+=== Processing SRX29017848 (SRR33796158) ===
+2026-07-18T22:56:07 prefetch.3.4.1: 1) Resolving 'SRR33796158'...
+2026-07-18T22:56:08 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T22:56:08 prefetch.3.4.1: 1) Downloading 'SRR33796158'...
+2026-07-18T22:56:08 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T22:56:08 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T22:56:18 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T22:56:20 prefetch.3.4.1:  'SRR33796158' is valid: 517604433 bytes were streamed from 517598445
+2026-07-18T22:56:20 prefetch.3.4.1: 1) 'SRR33796158' was downloaded successfully
+2026-07-18T22:56:20 prefetch.3.4.1: 1) Resolving 'SRR33796158's dependencies...
+2026-07-18T22:56:20 prefetch.3.4.1: 'SRR33796158' has 0 unresolved dependencies
+spots read      : 15,593,250
+reads read      : 15,593,250
+reads written   : 15,593,250
+[2m2026-07-18T22:56:41.736014Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T22:56:41.737934Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T22:56:44.714027Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T22:56:44.714080Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T22:56:46.003141Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T22:56:46.003200Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T22:56:46.083911Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T22:56:46.083995Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T22:56:46.296780Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T22:56:46.296840Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T22:56:48.447922Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m6.71004088
+[2m2026-07-18T22:56:48.456875Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T23:01:04.269623Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 13042421 / 15593250 fragments (83.64%)
+[2m2026-07-18T23:01:04.269813Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m255.821898096
+[2m2026-07-18T23:01:05.106242Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m0.836422727
+[2m2026-07-18T23:01:05.106376Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T23:03:10.677071Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m125.570825056
+[2m2026-07-18T23:03:10.836826Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.15975791
+[2m2026-07-18T23:03:10.903275Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017848_SRR33796158
+[2m2026-07-18T23:03:11.330314Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.49349091
+[2m2026-07-18T23:03:11.433107Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 15593250 fragments, mapped 13042421 (83.64%), 312618 equivalence classes
+=== Done SRX29017848 - success ===
+=== Processing SRX29017828 (SRR33796175) ===
+2026-07-18T23:03:12 prefetch.3.4.1: 1) Resolving 'SRR33796175'...
+2026-07-18T23:03:12 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T23:03:13 prefetch.3.4.1: 1) Downloading 'SRR33796175'...
+2026-07-18T23:03:13 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T23:03:13 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T23:03:13 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T23:03:13 prefetch.3.4.1:  'SRR33796175' is valid: 2134311 bytes were streamed from 2123272
+2026-07-18T23:03:13 prefetch.3.4.1: 1) 'SRR33796175' was downloaded successfully
+2026-07-18T23:03:13 prefetch.3.4.1: 1) Resolving 'SRR33796175's dependencies...
+2026-07-18T23:03:13 prefetch.3.4.1: 'SRR33796175' has 0 unresolved dependencies
+spots read      : 59,736
+reads read      : 59,736
+reads written   : 59,736
+[2m2026-07-18T23:03:14.000832Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T23:03:14.002800Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T23:03:16.869025Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T23:03:16.869083Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T23:03:18.645409Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T23:03:18.645463Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T23:03:18.725315Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T23:03:18.725385Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T23:03:19.018655Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T23:03:19.018719Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T23:03:21.738629Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m7.735889861
+[2m2026-07-18T23:03:21.747713Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T23:03:22.937012Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 44535 / 59736 fragments (74.55%)
+[2m2026-07-18T23:03:22.937076Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m1.198454568
+[2m2026-07-18T23:03:22.969658Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m0.032575296
+[2m2026-07-18T23:03:22.969713Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T23:03:33.010269Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m10.040610488
+[2m2026-07-18T23:03:33.019471Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.009202974
+[2m2026-07-18T23:03:33.082558Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017828_SRR33796175
+[2m2026-07-18T23:03:33.479528Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.4600591
+[2m2026-07-18T23:03:33.521910Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 59736 fragments, mapped 44535 (74.55%), 19240 equivalence classes
+=== Done SRX29017828 - success ===
+=== Processing SRX29017829 (SRR33796159) ===
+2026-07-18T23:03:33 prefetch.3.4.1: 1) Resolving 'SRR33796159'...
+2026-07-18T23:03:33 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T23:03:33 prefetch.3.4.1: 1) Downloading 'SRR33796159'...
+2026-07-18T23:03:33 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T23:03:33 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T23:03:52 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T23:03:54 prefetch.3.4.1:  'SRR33796159' is valid: 735483074 bytes were streamed from 735470445
+2026-07-18T23:03:54 prefetch.3.4.1: 1) 'SRR33796159' was downloaded successfully
+2026-07-18T23:03:54 prefetch.3.4.1: 1) Resolving 'SRR33796159's dependencies...
+2026-07-18T23:03:54 prefetch.3.4.1: 'SRR33796159' has 0 unresolved dependencies
+spots read      : 22,703,115
+reads read      : 22,703,115
+reads written   : 22,703,115
+[2m2026-07-18T23:04:22.519595Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T23:04:22.521520Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T23:04:25.099670Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T23:04:25.099726Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T23:04:26.316761Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T23:04:26.316816Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T23:04:26.392983Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T23:04:26.393052Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T23:04:26.586919Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T23:04:26.586968Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T23:04:30.047701Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m7.5262284170000004
+[2m2026-07-18T23:04:30.068512Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T23:11:24.710646Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 21202135 / 22703115 fragments (93.39%)
+[2m2026-07-18T23:11:24.713778Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m414.666079611
+[2m2026-07-18T23:11:25.888473Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.17469245
+[2m2026-07-18T23:11:25.888541Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T23:14:01.015495Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m155.127018614
+[2m2026-07-18T23:14:01.184956Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.169463974
+[2m2026-07-18T23:14:01.258238Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017829_SRR33796159
+[2m2026-07-18T23:14:01.798018Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.613065427
+[2m2026-07-18T23:14:01.914640Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 22703115 fragments, mapped 21202135 (93.39%), 380828 equivalence classes
+=== Done SRX29017829 - success ===
+=== Processing SRX29017830 (SRR33796174) ===
+2026-07-18T23:14:02 prefetch.3.4.1: 1) Resolving 'SRR33796174'...
+2026-07-18T23:14:03 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T23:14:03 prefetch.3.4.1: 1) Downloading 'SRR33796174'...
+2026-07-18T23:14:03 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T23:14:03 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T23:14:18 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T23:14:19 prefetch.3.4.1:  'SRR33796174' is valid: 653388949 bytes were streamed from 653381645
+2026-07-18T23:14:19 prefetch.3.4.1: 1) 'SRR33796174' was downloaded successfully
+2026-07-18T23:14:19 prefetch.3.4.1: 1) Resolving 'SRR33796174's dependencies...
+2026-07-18T23:14:19 prefetch.3.4.1: 'SRR33796174' has 0 unresolved dependencies
+spots read      : 20,140,332
+reads read      : 20,140,332
+reads written   : 20,140,332
+[2m2026-07-18T23:14:46.703705Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T23:14:46.705575Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T23:14:49.628527Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T23:14:49.628580Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T23:14:51.414479Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T23:14:51.414531Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T23:14:51.679770Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T23:14:51.679854Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T23:14:51.983584Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T23:14:51.983643Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T23:14:56.739576Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m10.03405644
+[2m2026-07-18T23:14:56.748700Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-18T23:20:32.965614Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 18753018 / 20140332 fragments (93.11%)
+[2m2026-07-18T23:20:32.965698Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m336.226129271
+[2m2026-07-18T23:20:34.050492Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.084788911
+[2m2026-07-18T23:20:34.050555Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-18T23:23:02.318897Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m148.268400005
+[2m2026-07-18T23:23:02.478606Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.159713567
+[2m2026-07-18T23:23:02.584480Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017830_SRR33796174
+[2m2026-07-18T23:23:03.113341Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.634734965
+[2m2026-07-18T23:23:03.227499Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 20140332 fragments, mapped 18753018 (93.11%), 337729 equivalence classes
+=== Done SRX29017830 - success ===
+=== Processing SRX29017831 (SRR33796173) ===
+2026-07-18T23:23:04 prefetch.3.4.1: 1) Resolving 'SRR33796173'...
+2026-07-18T23:23:04 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-18T23:23:04 prefetch.3.4.1: 1) Downloading 'SRR33796173'...
+2026-07-18T23:23:04 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-18T23:23:04 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-18T23:26:16 prefetch.3.4.1:  HTTPS download succeed
+2026-07-18T23:26:37 prefetch.3.4.1:  'SRR33796173' is valid: 9009025941 bytes were streamed from 9009017462
+2026-07-18T23:26:37 prefetch.3.4.1: 1) 'SRR33796173' was downloaded successfully
+2026-07-18T23:26:37 prefetch.3.4.1: 1) Resolving 'SRR33796173's dependencies...
+2026-07-18T23:26:37 prefetch.3.4.1: 'SRR33796173' has 0 unresolved dependencies
+spots read      : 288,257,587
+reads read      : 288,257,587
+reads written   : 288,257,587
+[2m2026-07-18T23:36:28.335818Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-18T23:36:28.351379Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-18T23:36:39.105198Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-18T23:36:39.105316Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-18T23:36:48.010389Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-18T23:36:48.010446Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-18T23:36:48.275441Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-18T23:36:48.275503Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-18T23:36:49.708786Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-18T23:36:49.708831Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-18T23:37:02.206724Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m33.856066678
+[2m2026-07-18T23:37:02.215975Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-19T00:51:15.316142Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 273434919 / 288257587 fragments (94.86%)
+[2m2026-07-19T00:51:15.317235Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m4453.110517409
+[2m2026-07-19T00:51:17.822556Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m2.505316847
+[2m2026-07-19T00:51:17.822727Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-19T00:56:52.342657Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m334.520097369
+[2m2026-07-19T00:56:52.812974Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.470322266
+[2m2026-07-19T00:56:53.152765Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017831_SRR33796173
+[2m2026-07-19T00:56:53.626852Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.813879182
+[2m2026-07-19T00:56:54.067858Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 288257587 fragments, mapped 273434919 (94.86%), 738720 equivalence classes
+=== Done SRX29017831 - success ===
+=== Processing SRX29017832 (SRR33796171) ===
+2026-07-19T00:57:01 prefetch.3.4.1: 1) Resolving 'SRR33796171'...
+2026-07-19T00:57:01 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-19T00:57:01 prefetch.3.4.1: 1) Downloading 'SRR33796171'...
+2026-07-19T00:57:01 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-19T00:57:01 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-19T00:57:11 prefetch.3.4.1:  HTTPS download succeed
+2026-07-19T00:57:13 prefetch.3.4.1:  'SRR33796171' is valid: 416654633 bytes were streamed from 416645445
+2026-07-19T00:57:13 prefetch.3.4.1: 1) 'SRR33796171' was downloaded successfully
+2026-07-19T00:57:13 prefetch.3.4.1: 1) Resolving 'SRR33796171's dependencies...
+2026-07-19T00:57:13 prefetch.3.4.1: 'SRR33796171' has 0 unresolved dependencies
+spots read      : 12,705,385
+reads read      : 12,705,385
+reads written   : 12,705,385
+[2m2026-07-19T00:57:44.707472Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-19T00:57:44.732098Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-19T00:58:09.557026Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-19T00:58:09.557078Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-19T00:58:38.134648Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-19T00:58:38.134780Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-19T00:58:40.933079Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-19T00:58:40.933215Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-19T00:58:49.359526Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-19T00:58:49.359662Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-19T00:59:43.062741Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m118.334434199
+[2m2026-07-19T00:59:43.082166Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-19T01:03:28.666834Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 11181759 / 12705385 fragments (88.01%)
+[2m2026-07-19T01:03:28.666903Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m225.604185632
+[2m2026-07-19T01:03:29.560304Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m0.893394307
+[2m2026-07-19T01:03:29.560360Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-19T01:04:56.805795Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m87.245487621
+[2m2026-07-19T01:04:56.950415Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.144621504
+[2m2026-07-19T01:04:57.023607Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017832_SRR33796171
+[2m2026-07-19T01:04:57.601280Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.650868087
+[2m2026-07-19T01:04:57.752578Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 12705385 fragments, mapped 11181759 (88.01%), 306665 equivalence classes
+=== Done SRX29017832 - success ===
+=== Processing SRX29017833 (SRR33796170) ===
+2026-07-19T01:04:58 prefetch.3.4.1: 1) Resolving 'SRR33796170'...
+2026-07-19T01:04:58 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-19T01:04:58 prefetch.3.4.1: 1) Downloading 'SRR33796170'...
+2026-07-19T01:04:58 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-19T01:04:58 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-19T01:05:12 prefetch.3.4.1:  HTTPS download succeed
+2026-07-19T01:05:13 prefetch.3.4.1:  'SRR33796170' is valid: 505449711 bytes were streamed from 505439465
+2026-07-19T01:05:13 prefetch.3.4.1: 1) 'SRR33796170' was downloaded successfully
+2026-07-19T01:05:13 prefetch.3.4.1: 1) Resolving 'SRR33796170's dependencies...
+2026-07-19T01:05:13 prefetch.3.4.1: 'SRR33796170' has 0 unresolved dependencies
+spots read      : 15,292,233
+reads read      : 15,292,233
+reads written   : 15,292,233
+[2m2026-07-19T01:05:33.792658Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-19T01:05:33.807567Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-19T01:05:43.202383Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-19T01:05:43.202434Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-19T01:05:47.442215Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-19T01:05:47.442289Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-19T01:05:47.528332Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-19T01:05:47.528431Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-19T01:05:47.799509Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-19T01:05:47.799578Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-19T01:05:51.448804Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m17.641942304
+[2m2026-07-19T01:05:51.464459Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-19T01:09:39.940739Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 13807306 / 15292233 fragments (90.29%)
+[2m2026-07-19T01:09:39.940807Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m228.492010988
+[2m2026-07-19T01:09:41.451719Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.510897592
+[2m2026-07-19T01:09:41.451873Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-19T01:12:19.595774Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m158.144057611
+[2m2026-07-19T01:12:19.742937Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.147167788
+[2m2026-07-19T01:12:19.817523Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017833_SRR33796170
+[2m2026-07-19T01:12:20.248266Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.505316342
+[2m2026-07-19T01:12:20.351498Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 15292233 fragments, mapped 13807306 (90.29%), 312553 equivalence classes
+=== Done SRX29017833 - success ===
+=== Processing SRX29017835 (SRR33796172) ===
+2026-07-19T01:12:21 prefetch.3.4.1: 1) Resolving 'SRR33796172'...
+2026-07-19T01:12:21 prefetch.3.4.1: Current preference is set to retrieve SRA Normalized Format files with full base quality scores
+2026-07-19T01:12:21 prefetch.3.4.1: 1) Downloading 'SRR33796172'...
+2026-07-19T01:12:21 prefetch.3.4.1:  SRA Normalized Format file is being retrieved
+2026-07-19T01:12:21 prefetch.3.4.1:  Downloading via HTTPS...
+2026-07-19T01:13:16 prefetch.3.4.1:  HTTPS download succeed
+2026-07-19T01:13:17 prefetch.3.4.1:  'SRR33796172' is valid: 642983343 bytes were streamed from 642980929
+2026-07-19T01:13:17 prefetch.3.4.1: 1) 'SRR33796172' was downloaded successfully
+2026-07-19T01:13:17 prefetch.3.4.1: 1) Resolving 'SRR33796172's dependencies...
+2026-07-19T01:13:18 prefetch.3.4.1: 'SRR33796172' has 0 unresolved dependencies
+spots read      : 19,087,000
+reads read      : 19,087,000
+reads written   : 19,087,000
+[2m2026-07-19T01:13:42.154778Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-07-19T01:13:42.156712Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ssi
+[2m2026-07-19T01:13:46.387680Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=31, 38431075 strings, canonical=true
+[2m2026-07-19T01:13:46.387737Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ctab
+[2m2026-07-19T01:13:54.721179Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 contigs, 413793858 entries, entry_width=48 bits
+[2m2026-07-19T01:13:54.721235Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from /home/yq139/data/files/salmon_index/gencode_v49_index/index.refinfo
+[2m2026-07-19T01:13:55.075646Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   517493 references, max_ref_len=248946422
+[2m2026-07-19T01:13:55.075716Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from /home/yq139/data/files/salmon_index/gencode_v49_index/index.ectab
+[2m2026-07-19T01:13:57.015964Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   38431075 tiles, 9323960 ECs, 109412070 label entries
+[2m2026-07-19T01:13:57.016018Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=29, pos_mask=0xfffffff
+[2m2026-07-19T01:14:10.415976Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m28.259322272
+[2m2026-07-19T01:14:10.425337Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 4 threads)
+[2m2026-07-19T01:24:33.564229Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 15506585 / 19087000 fragments (81.24%)
+[2m2026-07-19T01:24:33.564899Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m623.148927596
+[2m2026-07-19T01:24:34.647386Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m1.082483836
+[2m2026-07-19T01:24:34.647454Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m estimating abundances (VBEM)
+[2m2026-07-19T01:26:42.582385Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m127.934994559
+[2m2026-07-19T01:26:42.745074Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.162691499
+[2m2026-07-19T01:26:42.834800Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to /home/yq139/alu_brca/part5_dose_switch/results/salmon_quant/SRX29017835_SRR33796172
+[2m2026-07-19T01:26:43.385319Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.640247669
+[2m2026-07-19T01:26:43.495441Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m processed 19087000 fragments, mapped 15506585 (81.24%), 357428 equivalence classes
+=== Done SRX29017835 - success ===
+Batch complete.

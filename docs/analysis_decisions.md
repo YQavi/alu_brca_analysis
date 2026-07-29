@@ -10,7 +10,7 @@
 | 06/30/2026 | Part 1 - Final signature size after TCGA mapping | Minimum gene set threshold: 250-300 genes. Analysis yieled 419 genes mapped to TCGA Entrez IDs/724 protein-coding CIA genes | Signature captures functional breadth across CIA-proximal pathways, not a curated known-pathway list. Dropping below 250 would risk the score being dominated by a single functional category rather than reflecting the full Alu-ERE regulatory landscape |
 | 2026-06 | Part 1 | Exclude BRCA_Normal (n=36) from primary subtype comparison | PAM50 Normal-like tumors are NOT normal tissue — likely heavily stromal-contaminated tumors, not a true subtype. Including as baseline would be biologically misleading as true matched normals are absent from this dataset | Include as a sixth subtype; include as biological control baseline — both rejected due to ambiguous biological identity |
 | 2026-06 | Part 1 | Expression matrix accepted as clean; 2 samples dropped via inner join | RSEM range 0–249,463 is expected; no NAs; high values reflect highly expressed genes. 2 samples had clinical data only and NA subtype — inner join exclusion causes no information loss | Impute missing expression values — rejected as only 2 samples affected |
-[2026-07] [Part 5] [Han et al. data availability — gate 1]
+[2026-07] [Part 2] [Han et al. data availability — gate 1]
 Checked JBC published page, ScienceDirect mirror, and full bioRxiv preprint
 (2022.09.23.509212) text. No Data Availability statement or GEO accession
 found in any version. This is atypical for a 2025 JBC paper and blocks
@@ -21,12 +21,12 @@ in parallel, proceed with H2 as a within-Kim-only motif co-occurrence test
 that doesn't require Han's raw data. Upgrade to full two-lab overlap if a
 reply provides access.
 
-[2026-07] [Part 5] [Kim et al. GEO accessions — confirmed]
+[2026-07] [Part 2] [Kim et al. GEO accessions — confirmed]
 RNA-seq: GSE298771 | ChIP-seq: GSE298767 | ATAC-seq: GSE298769
 PRO-seq: GSE298770 | Superseries: GSE298773 | RIME: MSV000098072
 Source: Data and Materials section, bioRxiv 2025.08.08.669412 full text.
 
-[2026-07] [Part 5] [Han et al. data availability — gate 1]
+[2026-07] [Part 2] [Han et al. data availability — gate 1]
 Checked JBC published page, ScienceDirect mirror, and full bioRxiv preprint
 (2022.09.23.509212) text. No Data Availability statement or GEO accession
 found in any version. This is atypical for a 2025 JBC paper and blocks
@@ -37,18 +37,18 @@ in parallel, proceed with H2 as a within-Kim-only motif co-occurrence test
 that doesn't require Han's raw data. Upgrade to full two-lab overlap if a
 reply provides access.
 
-[2026-07] [Part 5] [Kim et al. GEO accessions — confirmed]
+[2026-07] [Part 2] [Kim et al. GEO accessions — confirmed]
 RNA-seq: GSE298771 | ChIP-seq: GSE298767 | ATAC-seq: GSE298769
 PRO-seq: GSE298770 | Superseries: GSE298773 | RIME: MSV000098072
 Source: Data and Materials section, bioRxiv 2025.08.08.669412 full text.
 
-[2026-07] [Part 5] [Option 3 motif IDs corrected]
+[2026-07] [Part 2] [Option 3 motif IDs corrected]
 MA0517.1 is STAT1::STAT2 heterodimer, not standalone STAT2. Corrected set:
 STAT1=MA0137.3, STAT2=MA1623.1, IRF1=MA0050.2, dimer=MA0517.1 (included).
 Source: JASPAR (jaspar.elixir.no), cross-checked against Kolendowski/Weichselbaum-
 era literature use of MA0137.2/MA0050.1 as the STAT1/IRF1 convention.
 
-[2026-07] [Part 5] [Real bug: wrong SRX accessions downloaded/aligned for ER 10pM]
+[2026-07] [Part 2] [Real bug: wrong SRX accessions downloaded/aligned for ER 10pM]
 Positionally-inferred SRX accessions (assumed sequential by dose) were wrong -
 GEO's SRX assignment for GSE298767 is not sequential by treatment condition.
 Downloaded/aligned files were actually ER@1nM rep3 (SRX29018172) + two 10nM
@@ -60,14 +60,14 @@ Fix: built accession_map_verified.tsv from the XML, verified before every
 download from here forward. Misdownloaded files were not wasted - renamed
 and kept as real ER@1nM/input@10nM data, useful for later doses.
 
-[2026-07] [Part 5] [10pM input alignment rate anomaly]
+[2026-07] [Part 2] [10pM input alignment rate anomaly]
 ER_10pM_input_v2 aligned at 64.59% vs treatment's 94.05% - a larger gap
 than expected between input and ChIP. ~38M reads still aligned, sufficient
 for background estimation, so proceeded without re-trimming/re-downloading.
 Worth adapter-trimming (fastp/cutadapt) before aligning future input samples
 if the pattern recurs at other doses.
 
-[2026-07] [Part 5] [First real, trustworthy peak set: ER 10pM]
+[2026-07] [Part 2] [First real, trustworthy peak set: ER 10pM]
 99 peaks called, ER_10pM_v2_real (MACS3, q<0.05, correct SRX-verified
 accessions, MAPQ>=30 filtered, 36.4M treatment / 32.8M input reads).
 Fold enrichment 7-77x, peak widths ~200-450bp - biologically plausible,
@@ -75,7 +75,7 @@ consistent with low-dose ERBS being the smallest/most selective cistrome
 per Kim et al. Fig S3B. This supersedes both the Path A bigwig
 approximation and the earlier mismapped-sample zero-peak result.
 
-[2026-07] [Part 5] [Coordinate bug: GREB1 validation used hg19 coordinates on hg38 data]
+[2026-07] [Part 2] [Coordinate bug: GREB1 validation used hg19 coordinates on hg38 data]
 Earlier GREB1 sanity-check window (chr2:11,674,000-11,677,000) was hg19 -
 true hg38 GREB1 gene body is chr2:11,482,341-11,642,789, ~30kb away and
 non-overlapping. Both the original bigwig comparison and the ER_10pM_v2
@@ -83,7 +83,7 @@ peak-overlap check were invalid as a result. Re-ran with correct hg38
 coordinates. All genomic coordinate checks going forward verified against
 hg38 explicitly before use.
 
-[2026-07] [Part 5] [Real peak counts: 3 of 4 doses complete]
+[2026-07] [Part 2] [Real peak counts: 3 of 4 doses complete]
 10pM: 99 peaks | 100pM: 2,607 peaks | 1nM: 5,764 peaks (pre-alt-filter)
 All MACS3 q<0.05, MAPQ>=30, correct verified SRX/SRR accessions.
 Monotonic increase with dose, consistent with Kim et al. Fig S3B shape.
@@ -93,7 +93,7 @@ accession download.
 Remaining: 10nM (partial FASTQ already on disk from mismapped download -
 input reps 1,2 as SRR33796548/543; need rep3 + all 3 ER reps).
 
-[2026-07] [Part 5] [MILESTONE: All 4 doses have real, verified peak sets]
+[2026-07] [Part 2] [MILESTONE: All 4 doses have real, verified peak sets]
 10pM: 99 | 100pM: 2,607 | 1nM: 5,764 | 10nM: <PASTE FILTERED COUNT>
 (standard chromosomes only, MACS3 q<0.05, MAPQ>=30, all SRX/SRR accessions
 cross-verified via ENA before download). Monotonic dose-response increase
@@ -103,7 +103,7 @@ pM*/nM* combined groups (10pM+100pM vs 1nM+10nM, matching Kim et al.'s
 own convention) and move to H1 (Alu subfamily enrichment) and H2
 (STAT1/IRF motif co-occurrence) in Week 3.
 
-[2026-07] [Part 5] [MILESTONE: All 4 doses have real, verified peak sets]
+[2026-07] [Part 2] [MILESTONE: All 4 doses have real, verified peak sets]
 10pM: 99 | 100pM: 2,607 | 1nM: 5,764 | 10nM: 13,118
 (standard chromosomes only, MACS3 q<0.05, MAPQ>=30, all SRX/SRR accessions
 cross-verified via ENA before download). Monotonic dose-response increase
@@ -113,7 +113,7 @@ pM*/nM* combined groups (10pM+100pM vs 1nM+10nM, matching Kim et al.'s
 own convention) and move to H1 (Alu subfamily enrichment) and H2
 (STAT1/IRF motif co-occurrence) in Week 3.
 
-[2026-07] [Part 5] [H1 first-pass result — with a major confound flagged]
+[2026-07] [Part 2] [H1 first-pass result — with a major confound flagged]
 Real subfamily-tiered Alu overlap (young/middle/old vs pM*/nM* merged peaks):
 all tiers under-represented vs genome-wide null; young MOST depleted
 (ratio 0.45) in both dose groups - opposite direction from H1's prediction.
@@ -126,7 +126,7 @@ allowing multi-mapped reads (e.g. bowtie2 -k with fractional/best-scoring
 assignment, or a repeat-aware caller) and compare young-tier overlap rate
 with vs without the MAPQ filter.
 
-[2026-07] [Part 5] [H1 statistical result: significant graded depletion by Alu age]
+[2026-07] [Part 2] [H1 statistical result: significant graded depletion by Alu age]
 binom.test results, all vs genome-wide null:
 young pM* p=2.16e-4 | young nM* p=2.17e-17
 middle pM* p=2.81e-13 | middle nM* p=6.8e-9
@@ -139,7 +139,7 @@ identical gradient for purely technical reasons. UNRESOLVED - cannot
 currently distinguish the two explanations. Do not report/interpret this
 result further until the multi-mapping confound is directly tested.
 
-[2026-07] [Part 5] [H1 confound test result: MAPQ filter ruled out]
+[2026-07] [Part 2] [H1 confound test result: MAPQ filter ruled out]
 Reran 10pM peak calling without MAPQ filter (all mapped reads, no
 uniqueness requirement). Young-Alu overlap did NOT improve - if anything
 got worse (1/99 filtered -> 0/120 unfiltered). This is the opposite of
@@ -155,7 +155,7 @@ narrative accordingly, or (b) run the same unfiltered comparison at 100pM/
 1nM/10nM for a larger-sample confirmation before committing to the
 reframe.
 
-[2026-07] [Part 5] [H1 CONFOUND RESOLVED: MAPQ filter ruled out across 3 doses]
+[2026-07] [Part 2] [H1 CONFOUND RESOLVED: MAPQ filter ruled out across 3 doses]
 Unfiltered vs filtered young-Alu overlap rate, per dose:
 100pM: 0.65% -> 0.70% | 1nM: 0.71% -> 0.70% | 10nM: 0.66% -> 0.63%
 All changes <0.1pp, no consistent direction - MAPQ filtering has no
@@ -171,7 +171,7 @@ narrative - see discussion needed on whether depletion itself is the
 new finding to build the story around, or whether to pivot to H2 first
 and revisit H1 framing after.
 
-[2026-07] [Part 5] [H2 RESULT: no STAT1/IRF motif differential between pM*/nM*]
+[2026-07] [Part 2] [H2 RESULT: no STAT1/IRF motif differential between pM*/nM*]
 Threshold calibration: p<0.005 (Kim et al.'s stated threshold) was too
 permissive for these short JASPAR PWMs at 400bp/dual-strand scan - both
 groups saturated at 97-98% hit rate, uninformative. FIMO's internal
@@ -193,7 +193,7 @@ methodology and found NOT to hold as originally framed. Both real,
 trustworthy negative results - not artifacts. Needs a full narrative
 reassessment before continuing to H3/H4/H5 as originally scoped.
 
-[2026-07] [Part 5] [H2 Alu-restricted retest: confirms genome-wide null]
+[2026-07] [Part 2] [H2 Alu-restricted retest: confirms genome-wide null]
 Restricted the STAT1/IRF motif comparison to only pM*/nM* peaks overlapping
 Alu elements (n=270 pM*, n=2347 nM*), closing the gap where the earlier
 H2 test had drifted from the original Alu-anchored formulation to a
@@ -205,7 +205,7 @@ Alu-specific forms and fails in both. This closes H2 testing for Part 5
 pending any pivot to per-individual-dose (rather than pooled pM*/nM*)
 resolution, which remains untested.
 
-[2026-07] [Part 5] [H3 RESULT: no CIA-gene / pM-responsive-gene enrichment]
+[2026-07] [Part 2] [H3 RESULT: no CIA-gene / pM-responsive-gene enrichment]
 Test design note: original CIA expression matrix (brca_expr_cia.tsv) is
 already restricted to 386 CIA genes, not genome-wide - true genome-wide
 CIA-score-vs-pM-gene-set correlation (as originally scoped) was not
@@ -231,7 +231,7 @@ This is a major finding for Part 5's narrative: the "Alu as dose-tunable
 switch linking CIA biology to STAT1/immune cooperation" story is not
 supported by the data as tested. Requires full narrative reassessment.
 
-[2026-07] [Part 5] [Mechanistic test: chromatin accessibility does NOT explain H1 depletion]
+[2026-07] [Part 2] [Mechanistic test: chromatin accessibility does NOT explain H1 depletion]
 Tested whether young-Alu ERalpha depletion (H1) is explained by baseline
 chromatin silencing, using Kim et al.'s vehicle-condition ATAC-seq
 (GSE298769, no dose applied - tests accessibility independent of ERalpha).
@@ -249,7 +249,7 @@ young Alu being chromatin-accessible at baseline, which argues for a
 more specific, sequence- or factor-level exclusion mechanism rather than
 simple heterochromatin/silencing.
 
-[2026-07] [Part 5] [Mechanistic test: CpG density does NOT explain within-tier ERalpha binding]
+[2026-07] [Part 2] [Mechanistic test: CpG density does NOT explain within-tier ERalpha binding]
 GC%/CpG o/e shows a real, monotonic gradient with Alu age (young=0.542/0.617,
 middle=0.515/0.357, old=0.500/0.177 GC%/CpG o/e) - confirms age-tiering
 validity independently. But within young Alu specifically, ERalpha-bound
@@ -267,7 +267,7 @@ open. Pausing further mechanism search here given time budget - moving
 to TCGA survival layer next, will revisit Alu subfamily population
 structure after.
 
-[2026-07] [Part 5] [Data provenance gap discovered: brca_expr_cia.tsv]
+[2026-07] [Part 2] [Data provenance gap discovered: brca_expr_cia.tsv]
 The Part 1 CIA expression matrix (brca_expr_cia.tsv) has no documented
 source - script 01_cia_signature_score.R reads it as a pre-existing input,
 never generates it, and no earlier decision-log entry describes its origin.
@@ -278,7 +278,7 @@ full gene coverage, documented query this time) rather than attempting
 to reverse-engineer the undocumented original. Recommend Part 1's
 provenance be confirmed/documented retroactively when time allows.
 
-[2026-07] [Part 5] [H6 RESULT: no survival association for Alu-proximal or Alu-distal ERalpha-target genes]
+[2026-07] [Part 2] [H6 RESULT: no survival association for Alu-proximal or Alu-distal ERalpha-target genes]
 TCGA BRCA PanCancer Atlas 2018 (n=1082 samples, 151 events), gene sets
 defined as nearest genes to real ERalpha peaks that do/don't overlap Alu
 elements (combined pM*+nM* peak set, n=13,144 total peaks -> 1,229
@@ -301,7 +301,7 @@ remains H1's age-graded ERalpha depletion at Alu elements - real,
 confound-tested twice, but without an identified downstream consequence
 or upstream mechanism at this point.
 
-[2026-07] [Part 5] [H7 RESULT: FOXA1 replicates ERalpha's Alu depletion; GATA3 does not]
+[2026-07] [Part 2] [H7 RESULT: FOXA1 replicates ERalpha's Alu depletion; GATA3 does not]
 Same tiered-Alu overlap test (H1's method) applied to FOXA1 and GATA3
 peaks (bigwig-derived, matched vehicle input, calibrated qpois cutoff
 c=5 - peak totals cross-checked against Kim et al. Fig S5B, same order
@@ -322,7 +322,7 @@ than "why does ERalpha specifically avoid young Alu." GATA3's divergent
 pattern (enrichment at old Alu) is a separate, real factor-specific
 finding worth its own note.
 
-[2026-07] [Part 5] [H8 RESULT: subfamily-resolved breakdown - AluY and AluSc drive depletion, AluJr4 reverses]
+[2026-07] [Part 2] [H8 RESULT: subfamily-resolved breakdown - AluY and AluSc drive depletion, AluJr4 reverses]
 49 subfamilies tested individually (BH-FDR corrected across all), vs
 pM*/nM* merged peaks. Significant after FDR<0.05:
   AluY (young, 33.4Mbp, largest young subfamily): pM ratio=0.40 FDR=0.015,
@@ -342,7 +342,7 @@ going forward should reference AluY/AluSc specifically rather than
 "young Alu" as a blanket category, since several other young subfamilies
 (Ya5, Yb8, Ym1, etc.) had too few peaks for reliable individual testing.
 
-[2026-07] [Part 5] [H9: FOXA1 subfamily-level + sequence + positional follow-ups]
+[2026-07] [Part 2] [H9: FOXA1 subfamily-level + sequence + positional follow-ups]
 FOXA1 at AluY/AluSc/AluJr4 (expected from bp fraction, observed from real peaks):
   AluY: ratio 0.52(pM)/0.54(nM) - closely matches ERalpha's own AluY depletion
     (0.40/0.42) - confirms AluY exclusion is FOXA1/pioneer-factor-inherited.
@@ -365,7 +365,7 @@ regardless of binding status. Wrong metric for the question; would need
 intronic/intergenic classification or TSS-distance to be meaningful.
 Not pursued further given time budget.
 
-[2026-07] [Part 5] [H9 formalized: structured data + figures saved]
+[2026-07] [Part 2] [H9 formalized: structured data + figures saved]
 FOXA1-vs-ERalpha subfamily comparison and sequence composition data
 written to h9_tf_subfamily_comparison.csv / h9_sequence_composition.csv,
 figures generated (h9_tf_inheritance_by_subfamily, h9_sequence_composition).
