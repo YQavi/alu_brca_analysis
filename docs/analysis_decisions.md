@@ -461,3 +461,26 @@ that gap suggests an additional ERalpha/GATA3-specific mechanism beyond
 FOXA1 motif availability, still unidentified. This is the final
 mechanism-hunting result for Part 2; H11 + H7/H9 together form the
 complete, evidence-based mechanistic account.
+
+[2026-07] [Part 2] [H10 REVALIDATED: fixed methodology confirms and sharpens original finding]
+Rebuilt H10 addressing 3 of 5 identified gaps: (1) log1p transform before
+z-scoring (right-skewed signal), (2) PCA-derived composite instead of
+unweighted average (PC1 explains 75.5-78.6% variance per dose - three
+assays genuinely share one activity axis, validating the compositing
+approach), (3) unified logistic regression (overlap ~ strength*alu_tier+dose,
+n=14,337 peak-tier observations) replacing 9 patchwork Fisher tests + FDR.
+Did NOT fix: independent enhancer boundary calling (would require new
+peak calls from ATAC/H3K27ac/PROseq rather than reusing ERalpha peaks) -
+flagged as a standing limitation, not resolved.
+RESULT: confirms original finding on firmer ground. strength:middle-Alu
+interaction significant (OR=1.54, CI[1.18,2.00], p=0.0014), now pooled
+across all 3 doses rather than resting on one dose surviving correction.
+strength:young-Alu interaction NOT significant (OR=1.19, CI crosses 1,
+p=0.46) - confirms H1's core exclusion is strength-independent, on a
+properly powered joint test rather than absence of signal in 3 separate
+small tests. NEW finding invisible in the original approach: significant
+dose main effect (10nM OR=1.53 vs 100pM, p<0.0001) - Alu overlap rate
+rises with dose independent of enhancer strength.
+Bidirectionality index (proseq_bidir) computed and saved in
+enhancer_strength_classification_v2.csv for future eRNA-specific work,
+not used in this analysis.
