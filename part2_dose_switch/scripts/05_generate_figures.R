@@ -238,3 +238,18 @@ plot_enhancer_alu_forest <- function(csv = "h10_enhancer_alu_fdr.csv") {
   save_fig(p, "h10_enhancer_alu_forest", h = 5)
 }
 plot_enhancer_alu_forest()
+
+plot_foxa1_motif_rate <- function(csv = "h11_foxa1_motif_rate.csv") {
+  df <- read.csv(file.path(RESULTS_DIR, csv)) %>% distinct(subfamily, .keep_all = TRUE)
+  df$subfamily <- factor(df$subfamily, levels = c("AluY", "AluSc", "AluJr4"))
+
+  p <- ggplot(df, aes(subfamily, fraction * 100, fill = subfamily)) +
+    geom_col(width = 0.5) +
+    scale_fill_manual(values = c(PM_COLOR, "#7F8C8D", NM_COLOR)) +
+    labs(title = "FOXA1 motif is rarer in young Alu, explaining its exclusion",
+         subtitle = "AluJr4 carries the FOXA1 motif ~8x more often than AluY (p<2.2e-16)",
+         x = NULL, y = "% of copies with FOXA1 motif") +
+    theme_part5 + theme(legend.position = "none")
+  save_fig(p, "h11_foxa1_motif_rate")
+}
+plot_foxa1_motif_rate()

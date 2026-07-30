@@ -1,0 +1,5 @@
+subfamily,n_hit,n_total,fraction,comparison,odds_ratio,pvalue
+AluY,64,110881,0.000577,vs_AluJr4,0.1255,2.2e-16
+AluSc,48,36338,0.001321,vs_AluJr4,0.2876,3.9e-13
+AluJr4,96,20966,0.004579,reference,1.00,NA
+AluY,64,110881,0.000577,vs_AluSc,0.4366,2.5e-5

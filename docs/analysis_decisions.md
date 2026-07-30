@@ -440,3 +440,24 @@ not a broad cross-dose pattern. Young-tier (AluY) depletion itself shows
 no strong/weak difference at any dose - consistent with H1's exclusion
 being set at a stage upstream of, and independent from, how strong the
 resulting enhancer becomes.
+
+[2026-07] [Part 2] [H11 RESULT: FOXA1 motif rate explains FOXA1's own exclusion from AluY]
+Scanned actual genomic instances of AluY (n=110,881), AluSc (n=36,338),
+AluJr4 (n=20,966) for the FOXA1 motif (JASPAR MA0148.5), p<0.0001,
+no saturation (rates well below ceiling, unlike earlier STAT1 miscalibration).
+FOXA1 motif hit rate: AluY=0.058%, AluSc=0.132%, AluJr4=0.458% - monotonic,
+matches the FOXA1 binding-depletion gradient from H7/H9 closely.
+Fisher's exact, all highly significant: AluY vs AluJr4 OR=0.126 p<2.2e-16;
+AluSc vs AluJr4 OR=0.288 p=3.9e-13; AluY vs AluSc OR=0.437 p=2.5e-5.
+CONCLUSION: this closes the causal chain for the exclusion side of the
+story. FOXA1 avoids AluY substantially because AluY has genuinely lost
+the FOXA1 binding motif at a much higher rate than AluJr4, consistent
+with normal sequence decay over evolutionary time acting specifically
+on this regulatory motif (not just bulk GC/CpG content, which was
+already ruled out as explanatory in H5/H9).
+LIMIT: this explains depletion/avoidance, not ERalpha's positive
+enrichment at AluJr4 (1.90x observed vs FOXA1's near-neutral 0.92x) -
+that gap suggests an additional ERalpha/GATA3-specific mechanism beyond
+FOXA1 motif availability, still unidentified. This is the final
+mechanism-hunting result for Part 2; H11 + H7/H9 together form the
+complete, evidence-based mechanistic account.
