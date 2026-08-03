@@ -552,3 +552,23 @@ classification - complete. (2) Alu correlation with strength - complete,
 real effect confirmed (middle tier, pooled OR=1.54). (3) dose-specificity
 - tested formally, NOT supported, retracted. (4) nuclear speckle spatial
 validation - not attempted, no data available.
+
+[2026-07] [Part 2] [H11 validation complete: composition-matched background reveals two-layer effect]
+Dinucleotide-shuffled (composition-matched) background per subfamily:
+AluY real=0.058% vs shuffled=2.91% (OR=0.02); AluSc real=0.138% vs
+shuffled=3.25% (OR=0.04); AluJr4 real=0.520% vs shuffled=3.65% (OR=0.14).
+All highly significant (p<3e-71 to 0). Threshold confirmed correctly
+discriminating - not saturated, not the earlier genome-wide GC confound.
+NEW INSIGHT: all three subfamilies (even AluJr4) show real << shuffled,
+revealing a baseline structural suppression of the FOXA1 motif common to
+Alu sequence generally (likely reflecting real Alu consensus structure,
+not captured by dinucleotide composition alone) - separate from, and
+layered under, the graded AluY<AluSc<AluJr4 age-dependent difference.
+Precise conclusion going forward: Alu sequence generally suppresses
+FOXA1 motif relative to composition-matched expectation; this
+suppression is significantly stronger in younger subfamilies. The
+AluY-vs-AluJr4 comparison (OR=0.111, length-filtered) remains the
+primary causal claim and is unaffected by this validation.
+H11 fully revalidated: length-truncation confound addressed (finding
+unchanged), background threshold properly validated (composition-matched,
+not genome-wide), both fixes complete.
