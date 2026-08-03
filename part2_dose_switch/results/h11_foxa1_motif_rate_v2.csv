@@ -1,0 +1,4 @@
+subfamily,n_seqs,real_hit,real_pct,shuffled_hit,shuffled_pct,OR_vs_shuffled,p_vs_shuffled,length_filtered
+AluY,107027,62,0.0579,3118,2.9133,0.02,0.0,TRUE
+AluSc,32560,45,0.1382,1058,3.2494,0.04,1.77e-255,TRUE
+AluJr4,11918,62,0.5202,435,3.6499,0.14,2.60e-71,TRUE

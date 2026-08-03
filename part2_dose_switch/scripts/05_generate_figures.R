@@ -253,3 +253,21 @@ plot_foxa1_motif_rate <- function(csv = "h11_foxa1_motif_rate.csv") {
   save_fig(p, "h11_foxa1_motif_rate")
 }
 plot_foxa1_motif_rate()
+
+plot_foxa1_validation <- function(csv = "h11_foxa1_motif_rate_v2.csv") {
+  df <- read.csv(file.path(RESULTS_DIR, csv))
+  df$subfamily <- factor(df$subfamily, levels = c("AluY", "AluSc", "AluJr4"))
+  long <- df %>%
+    tidyr::pivot_longer(c(real_pct, shuffled_pct), names_to = "type", values_to = "pct") %>%
+    mutate(type = factor(type, levels = c("shuffled_pct", "real_pct"),
+                          labels = c("Composition-matched shuffle", "Real sequence")))
+
+  p <- ggplot(long, aes(subfamily, pct, fill = type)) +
+    geom_col(position = position_dodge(0.7), width = 0.6) +
+    scale_fill_manual(values = c(PM_COLOR, NM_COLOR)) +
+    labs(title = "FOXA1 motif suppressed below composition-matched chance in all Alu,\nmost strongly in AluY",
+         x = NULL, y = "% sequences with FOXA1 motif", fill = NULL) +
+    theme_part5
+  save_fig(p, "h11_foxa1_validation")
+}
+plot_foxa1_validation()
