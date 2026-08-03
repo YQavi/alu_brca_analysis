@@ -524,3 +524,31 @@ primary causal claim and is unaffected by this validation.
 H11 fully revalidated: length-truncation confound addressed (finding
 unchanged), background threshold properly validated (composition-matched,
 not genome-wide), both fixes complete.
+
+[2026-07] [Part 2] [H10 re-validated against original question: dose-specificity claim retracted]
+Re-checked H10 directly against the original four-part research question
+rather than the narrative that accumulated around it. Ran the full
+three-way interaction model (overlap ~ strength*alu_tier*dose) to
+formally test the "what dose activates the pathway" clause, which the
+earlier pooled model (main effects only) could not address and which
+the original since-abandoned per-dose Fisher approach had suggested
+(10nM) without a proper test.
+RESULT: ANOVA comparing pooled vs. three-way model: Deviance=9.67,
+df=10, p=0.470. NOT significant - no evidence the strength:middle-Alu
+relationship differs by dose. All individual three-way terms also
+non-significant (best p=0.095, uncorrected).
+CORRECTION: the impression that this effect is "10nM-specific" (from
+simple per-dose point estimates: 100pM OR=2.23 p=0.074, 1nM OR=1.27
+p=0.376, 10nM OR=1.57 p=0.0069) does NOT survive the formal interaction
+test - this is a textbook case of one of three per-dose estimates
+crossing p<0.05 by chance without the underlying difference between
+doses being statistically supported. RETRACTING the dose-specific
+framing used in figures/summaries to date.
+Corrected conclusion: strength:middle-tier-Alu correlation is present
+but dose-independent across the tested range (100pM-10nM) - "what dose
+activates the pathway" has no defensible answer from this analysis.
+Status of original 4-part research question: (1) strong/weak
+classification - complete. (2) Alu correlation with strength - complete,
+real effect confirmed (middle tier, pooled OR=1.54). (3) dose-specificity
+- tested formally, NOT supported, retracted. (4) nuclear speckle spatial
+validation - not attempted, no data available.
