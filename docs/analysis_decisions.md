@@ -600,3 +600,34 @@ classification - complete. (2) Alu correlation with strength - complete,
 real effect confirmed (middle tier, pooled OR=1.54). (3) dose-specificity
 - tested formally, NOT supported, retracted. (4) nuclear speckle spatial
 validation - not attempted, no data available.
+
+[2026-07] [Part 2] [H12: Alu-eRNA bidirectionality test - real, dose-modulated, but diffuse effect]
+Tested whether Alu-overlapping enhancer regions show bidirectional PRO-seq
+signal (eRNA signature) differently than non-Alu regions, using the
+proseq_bidir index computed during the H10 fix pass. n=21,500 classified
+enhancer regions across 3 doses.
+Raw per-dose Wilcoxon: significant only at 10nM (p=0.0001, FDR=0.00026);
+null at 100pM/1nM (FDR=0.95 both) - same single-dose-significant shape
+that proved to be a false pattern in H10's dose-specificity check, so
+NOT trusted without the formal interaction test this time (lesson
+applied from the H10 retraction).
+Full 3-way model (proseq_bidir ~ has_alu*strength_tier*dose) vs. reduced
+model: ANOVA F=8.54, p=4.7e-14 - UNLIKE H10, this formal test DOES
+support dose-dependence. However the specific 3-way term matching the
+raw per-dose pattern (has_alu:strong:dose10nM) is NOT significant
+(p=0.21); the significant 3-way term is has_alu:strong:dose1nM (p=0.025,
+one of many simultaneous terms, treated cautiously, uncorrected).
+Real, robust 2-way effects: has_alu:strength_strong interaction is
+negative and significant (est=-0.153, p=0.0066) - Alu overlap dampens
+the bidirectionality boost seen in strong enhancers generally.
+strength_strong:dose10nM is independently significant (est=0.067,
+p=6.4e-06) - strong enhancers show elevated, dose-dependent bidirectional
+signal regardless of Alu status.
+CONCLUSION: there is a real, dose-modulated relationship between Alu
+overlap and eRNA-like bidirectional transcription, but it is diffuse
+across several interacting terms rather than isolated to one clean
+dose x strength x Alu story. Do not report this as "Alu eRNA signal is
+specific to dose X" - report as "Alu status significantly modulates
+enhancer bidirectionality, and this relationship is dose-dependent
+(formally tested), with the clearest single driver being reduced
+Alu-associated bidirectionality specifically in strong enhancers."

@@ -1,0 +1,7 @@
+term,estimate,pvalue,note
+has_alu_main,0.054,0.186,not significant alone
+strength_strong_main,0.287,<2e-16,strong enhancers show more bidirectional signal generally
+has_alu_x_strength_strong,-0.153,0.0066,Alu dampens the strength-bidirectionality relationship
+strength_strong_x_dose10nM,0.067,6.4e-06,strong enhancers behave differently at 10nM regardless of Alu
+has_alu_x_strength_strong_x_dose1nM,0.146,0.025,marginal, one of many simultaneous terms, treat cautiously
+ANOVA_dose_interaction_test,NA,4.7e-14,formal test: dose DOES modulate the Alu x strength relationship
