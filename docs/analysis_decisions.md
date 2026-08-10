@@ -675,3 +675,12 @@ substantial and growing fraction of nominal ERalpha peaks at high dose
 lack independent active-enhancer evidence. Provides orthogonal support
 for Kim et al.'s own pM (curated/functional) vs nM (pharmacological/
 promiscuous) enhancer distinction.
+
+[2026-08] [Part 2] [Set B defined: PROseq-confirmed subset of Set A, all doses]
+Median bidirectionality split within Set A, per dose (not absolute
+threshold - avoids arbitrary cutoff). All four doses split ~50/50 as
+expected: 10pM 38/75, 100pM 716/1432, 1nM 1490/2978, 10nM 2701/5401.
+Note: 10pM median bidir (0.150) is notably lower than 100pM/1nM/10nM
+(0.277-0.297) - flagged as an observation only, not yet tested; small
+n=75 at 10pM could explain instability as easily as a real dose effect.
+Will test formally, not eyeball, when dose-dependence is examined.
