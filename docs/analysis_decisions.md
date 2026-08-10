@@ -661,3 +661,17 @@ here is biologically sensible rather than a red flag.
 Next: intersect with real ERalpha peaks per dose to define Set A
 (ERalpha + H3K27ac), independent of the reused-peak-boundary limitation
 flagged earlier in H10.
+
+[2026-08] [Part 2] [Step 2 bug caught: denominator mismatch, corrected]
+Set A intersection script counted intersection numerator from alt-scaffold-
+filtered peaks but denominator from unfiltered original files - off by
+the alt-scaffold count per dose (11 at 10nM, confirmed exact match).
+Corrected rates using proper filtered totals (99/2607/5764/13129):
+10pM=75.8%, 100pM=54.9%, 1nM=51.7%, 10nM=41.1% ERalpha peaks confirmed
+by independent H3K27ac.
+FINDING: steep, monotonic decline in H3K27ac-confirmation rate with dose.
+Validates the H10 "reused peak boundary" limitation empirically - a
+substantial and growing fraction of nominal ERalpha peaks at high dose
+lack independent active-enhancer evidence. Provides orthogonal support
+for Kim et al.'s own pM (curated/functional) vs nM (pharmacological/
+promiscuous) enhancer distinction.
