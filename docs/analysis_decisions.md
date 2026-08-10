@@ -631,3 +631,33 @@ specific to dose X" - report as "Alu status significantly modulates
 enhancer bidirectionality, and this relationship is dose-dependent
 (formally tested), with the clearest single driver being reduced
 Alu-associated bidirectionality specifically in strong enhancers."
+
+[2026-07] [Part 2] [H10 validated: original composite score confirmed against true log-fold-enrichment]
+Addressed the flagged gap that H10's composite score (PCA of raw z-scored
+signal) never normalized against background/input, unlike proper ChIP-seq
+practice. Computed true log10 fold-enrichment for H3K27ac specifically
+(macs3 bdgcmp -m logFE -p 1, vs matched input per dose - ATAC/PROseq have
+no deposited input in this dataset, so this correction is only possible
+for H3K27ac).
+RESULT: original composite score correlates strongly with true log10FE
+(Spearman rho=0.81-0.83, all doses, n=21,500 peaks, essentially certain
+p-values). Original strong/weak tier assignment shows a large, highly
+significant separation in true log2FE (strong median ~12x enrichment,
+weak median ~1.8x, p<1e-250 all doses).
+CONCLUSION: the background-normalization gap flagged as a limitation was
+real, but empirically confirmed NOT to have misled the strong/weak
+classification underlying H10 and H12. Original results stand validated,
+not just asserted. Limitation can now be described in the write-up as
+"checked and confirmed non-material" rather than an open concern.
+
+[2026-08] [Part 2] [New extension: independent H3K27ac peak calls, Step 1 complete]
+Called H3K27ac peaks independently (MACS3 bdgcmp qpois -p1, bdgpeakcall
+c=5) per dose, matched input, same calibration as FOXA1/GATA3. Real
+counts, standard chromosomes only: 10pM=54,407, 100pM=52,497, 1nM=53,863,
+10nM=56,066 - flat across doses, no dose gradient (unlike ERalpha's own
+steep 99->13,118 climb). This is expected: H3K27ac marks broad active
+chromatin, not exclusively ERalpha-driven activity, so dose-independence
+here is biologically sensible rather than a red flag.
+Next: intersect with real ERalpha peaks per dose to define Set A
+(ERalpha + H3K27ac), independent of the reused-peak-boundary limitation
+flagged earlier in H10.
