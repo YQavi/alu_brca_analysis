@@ -693,3 +693,25 @@ therefore had different total column counts per set (17 vs 10), breaking
 a script that assumed fixed absolute column positions. Fixed by indexing
 relative to ncol() (Alu subfamily always ncol-3, distance always ncol)
 rather than hardcoded positions - robust to either set's column width.
+
+[2026-08] [Part 2] [New extension Step 4 result: Set B overlap difference is real-direction but not significant; young-Alu subfamily pattern does NOT replicate]
+Formal test (10pM excluded due to complete separation, 0/38 events):
+Set A vs Set B Alu-overlap difference: est=-0.149, p=0.41 - consistent
+direction (Set B lower) across all 3 usable doses, but NOT statistically
+significant at this sample size. Dose does not modulate the effect
+(interaction p=0.93) - third independent confirmation of dose-independence
+in this project (after H10, H12).
+Subfamily-level test (n>=20 in Set A, FDR-corrected, Fisher's exact):
+NOTHING survives FDR<0.05. Best case AluSz FDR=0.055 (middle-tier, not
+young). AluY itself: FDR=0.661, not close to significant. The apparently
+clean AluY-lineage depletion pattern seen in the raw uncorrected table
+(driven by subfamilies with n=1-12) does NOT replicate once restricted
+to adequately-powered subfamilies and corrected - same small-sample
+instability pattern already documented in H8.
+CONCLUSION: Set A vs Set B (txnal-activity-defined) shows a real-direction
+but statistically inconclusive difference in Alu overlap; no specific
+subfamily-level signal survives proper testing. This is a genuine null/
+inconclusive result at current sample size, not a confirmed finding -
+report accordingly. Larger n (e.g. pooling replicate enhancer definitions,
+or lower-stringency Set B threshold) would be needed to resolve whether
+the observed direction is real.
