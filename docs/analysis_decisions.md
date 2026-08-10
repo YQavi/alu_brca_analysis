@@ -684,3 +684,12 @@ Note: 10pM median bidir (0.150) is notably lower than 100pM/1nM/10nM
 (0.277-0.297) - flagged as an observation only, not yet tested; small
 n=75 at 10pM could explain instability as easily as a real dose effect.
 Will test formally, not eyeball, when dose-dependence is examined.
+
+[2026-08] [Part 2] [Bug: Set A/Set B column mismatch in nearest-Alu aggregation]
+Set A files retained full 10-column narrowPeak format; Set B files
+(script 13) were written with only 3 columns (chrom/start/end), an
+inconsistency introduced when Set B was defined. bedtools closest output
+therefore had different total column counts per set (17 vs 10), breaking
+a script that assumed fixed absolute column positions. Fixed by indexing
+relative to ncol() (Alu subfamily always ncol-3, distance always ncol)
+rather than hardcoded positions - robust to either set's column width.
