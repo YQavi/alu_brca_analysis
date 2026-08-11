@@ -744,3 +744,14 @@ dose) rather than relying on the original script's assumptions from
 before these existed. All 20 newer tracks confirmed present, 52 total
 tracks in session. Session file: part2_dose_switch/igv/alu_brca_part2_session.xml
 - open via IGV Desktop File > Open Session.
+
+[2026-08] [Part 2] [PINTS overcalling resolved via built-in stringent tier - no rerun needed]
+PINTS's default output includes multiple confidence tiers as comma-
+separated membership flags per peak (Relaxed, Stringent(pval),
+Stringent(qval), or combinations). The full "default" counts flagged as
+implausibly high by PINTS's own warning were the RELAXED tier, not a
+mistuned run. Filtered to Stringent(qval) specifically (FDR-corrected,
+consistent with this project's standard) - no rerun required, fix was
+extracting the right existing subset from output already generated.
+Going forward, "PINTS peaks" refers to the Stringent(qval)-filtered
+files (*_stringent.bed suffix), not the raw output.
