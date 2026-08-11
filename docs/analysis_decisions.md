@@ -755,3 +755,19 @@ consistent with this project's standard) - no rerun required, fix was
 extracting the right existing subset from output already generated.
 Going forward, "PINTS peaks" refers to the Stringent(qval)-filtered
 files (*_stringent.bed suffix), not the raw output.
+
+[2026-08] [Part 2] [PINTS Stringent(qval) final counts - independent PRO-seq peak calling complete]
+Bidirectional, Stringent(qval)-filtered peak counts, all 4 doses:
+10pM=33,249 | 100pM=31,059 | 1nM=33,184 | 10nM=25,154
+Sane, genome-wide-TSS-scale counts (matches literature range for
+comparable PRO-cap/GRO-cap studies, 30-60k). Overcalling warning fully
+resolved via existing built-in tier filtering, no rerun needed.
+PATTERN NOTE: bidirectional PRO-seq peak count is roughly flat across
+dose (not a steep climb), matching independent H3K27ac peak counts
+(also flat, ~52-56k across doses) - both in contrast to ERalpha's own
+steep dose-response (99->13,118). Third independent assay showing this
+shape. Supports framing: dose-responsiveness in this system is specific
+to ERalpha binding itself, not to the broader chromatin/transcriptional
+activity marks ERalpha helps establish nearby.
+This completes independent PRO-seq peak calling for the project -
+final files: PROseq_{dose}_1_bidirectional_qval_final.bed
