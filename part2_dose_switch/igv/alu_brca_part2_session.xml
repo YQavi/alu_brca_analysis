@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Session genome="hg38" locus="All" version="8">
+    <Resources>
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/GSE298767_ER_10pM.bw" name="ERa_10pM" color="0,100,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/GSE298767_ER_100pM.bw" name="ERa_100pM" color="0,100,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/GSE298767_ER_1nM.bw" name="ERa_1nM" color="0,100,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/GSE298767_ER_10nM.bw" name="ERa_10nM" color="0,100,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/GSE298767_FOXA1_pM_R1_R2.bw" name="FOXA1_pM" color="150,150,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/GSE298767_GATA3_pM_R1_R2.bw" name="GATA3_pM" color="230,126,34" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/GSE298767_FOXA1_nM_R1_R2.bw" name="FOXA1_nM" color="150,150,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/GSE298767_GATA3_nM_R1_R2.bw" name="GATA3_nM" color="230,126,34" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298767_E2dose_100pM_H3K27ac_merge.bw" name="H3K27ac_100pM" color="0,150,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298769_E2_100pM_merged.bw" name="ATAC_100pM" color="128,0,128" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298770_MCF7_E2dosage_100pM_finalmerge.finalSORTED.plus.bw" name="PROseq_100pM_plus" color="200,0,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298770_MCF7_E2dosage_100pM_finalmerge.finalSORTED.minus_flipped.bw" name="PROseq_100pM_minus" color="200,0,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298767_E2dose_1nM_H3K27ac_merge.bw" name="H3K27ac_1nM" color="0,150,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298769_E2_1nM_merged.bw" name="ATAC_1nM" color="128,0,128" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298770_MCF7_E2dosage_1nM_finalmerge.finalSORTED.plus.bw" name="PROseq_1nM_plus" color="200,0,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298770_MCF7_E2dosage_1nM_finalmerge.finalSORTED.minus_flipped.bw" name="PROseq_1nM_minus" color="200,0,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298767_E2dose_10nM_H3K27ac_merge.bw" name="H3K27ac_10nM" color="0,150,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298769_E2_10nM_merged.bw" name="ATAC_10nM" color="128,0,128" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298770_MCF7_E2dosage_10nM_finalmerge.finalSORTED.plus.bw" name="PROseq_10nM_plus" color="200,0,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/data/raw/enhancer_signal/GSE298770_MCF7_E2dosage_10nM_finalmerge.finalSORTED.minus_flipped.bw" name="PROseq_10nM_minus" color="200,0,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/ER_10pM_v2_real_peaks.narrowPeak" name="ERa_10pM_peaks" color="50,50,50" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/ER_100pM_real_peaks.narrowPeak" name="ERa_100pM_peaks" color="50,50,50" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/ER_1nM_real_peaks.narrowPeak" name="ERa_1nM_peaks" color="50,50,50" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/ER_10nM_real_peaks.narrowPeak" name="ERa_10nM_peaks" color="50,50,50" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/strong_enhancers_10nM_v2.bed" name="Strong_enhancers_10nM" color="50,50,50" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/weak_enhancers_10nM_v2.bed" name="Weak_enhancers_10nM" color="50,50,50" />
+        <Resource path="/home/yq139/data/files/repeatmasker/alu_young.bed" name="Alu_young" color="180,180,0" />
+        <Resource path="/home/yq139/data/files/repeatmasker/alu_middle.bed" name="Alu_middle" color="180,180,0" />
+        <Resource path="/home/yq139/data/files/repeatmasker/alu_old.bed" name="Alu_old" color="180,180,0" />
+        <Resource path="/home/yq139/data/files/repeatmasker/AluY_only.bed" name="AluY" color="180,180,0" />
+        <Resource path="/home/yq139/data/files/repeatmasker/AluSc_only.bed" name="AluSc" color="180,180,0" />
+        <Resource path="/home/yq139/data/files/repeatmasker/AluJr4_only.bed" name="AluJr4" color="180,180,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/H3K27ac_10pM_real_peaks.narrowPeak" name="H3K27ac_10pM_peaks" color="0,150,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/H3K27ac_100pM_real_peaks.narrowPeak" name="H3K27ac_100pM_peaks" color="0,150,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/H3K27ac_1nM_real_peaks.narrowPeak" name="H3K27ac_1nM_peaks" color="0,150,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/H3K27ac_10nM_real_peaks.narrowPeak" name="H3K27ac_10nM_peaks" color="0,150,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/SetA_ER_H3K27ac_10pM.bed" name="SetA_10pM" color="0,100,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/SetB_ER_H3K27ac_PROseq_10pM.bed" name="SetB_10pM" color="200,0,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/SetA_ER_H3K27ac_100pM.bed" name="SetA_100pM" color="0,100,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/SetB_ER_H3K27ac_PROseq_100pM.bed" name="SetB_100pM" color="200,0,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/SetA_ER_H3K27ac_1nM.bed" name="SetA_1nM" color="0,100,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/SetB_ER_H3K27ac_PROseq_1nM.bed" name="SetB_1nM" color="200,0,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/SetA_ER_H3K27ac_10nM.bed" name="SetA_10nM" color="0,100,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/macs_real/SetB_ER_H3K27ac_PROseq_10nM.bed" name="SetB_10nM" color="200,0,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/pints_peaks/PROseq_10pM_1_bidirectional_peaks.bed" name="PINTS_bidirectional_10pM" color="200,0,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/pints_peaks/PROseq_10pM_1_divergent_peaks.bed" name="PINTS_divergent_10pM" color="150,0,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/pints_peaks/PROseq_100pM_1_bidirectional_peaks.bed" name="PINTS_bidirectional_100pM" color="200,0,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/pints_peaks/PROseq_100pM_1_divergent_peaks.bed" name="PINTS_divergent_100pM" color="150,0,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/pints_peaks/PROseq_1nM_1_bidirectional_peaks.bed" name="PINTS_bidirectional_1nM" color="200,0,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/pints_peaks/PROseq_1nM_1_divergent_peaks.bed" name="PINTS_divergent_1nM" color="150,0,150" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/pints_peaks/PROseq_10nM_1_bidirectional_peaks.bed" name="PINTS_bidirectional_10nM" color="200,0,0" />
+        <Resource path="/home/yq139/alu_brca/part2_dose_switch/results/pints_peaks/PROseq_10nM_1_divergent_peaks.bed" name="PINTS_divergent_10nM" color="150,0,150" />
+    </Resources>
+</Session>

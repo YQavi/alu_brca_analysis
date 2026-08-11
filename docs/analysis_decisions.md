@@ -736,3 +736,11 @@ deciding whether to retune and rerun.
 This closes the previously-flagged gap: PRO-seq had only ever been used
 as a signal overlay (bedtools map on pre-existing peak boundaries),
 never independently peak-called.
+
+[2026-08] [Part 2] [IGV session confirmed complete: 52 tracks]
+Rebuilt igv session script to explicitly check newer tracks (H3K27ac
+independent peaks, Set A/B per dose, PINTS bidirectional/divergent per
+dose) rather than relying on the original script's assumptions from
+before these existed. All 20 newer tracks confirmed present, 52 total
+tracks in session. Session file: part2_dose_switch/igv/alu_brca_part2_session.xml
+- open via IGV Desktop File > Open Session.
