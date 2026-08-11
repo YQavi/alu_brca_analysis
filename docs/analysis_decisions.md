@@ -795,3 +795,11 @@ NOTE: nearest-Alu search in this extension (unlike core H1/H8 tiering)
 includes FLAM/FRAM/FAM monomer elements, not dimer-Alu only - FRAM
 appears near the top of the subfamily table (non-significant). Flag if
 this table is used in a write-up.
+
+[2026-08] [Part 2] [Heatmap finalized: 28/30 top survival candidates plotted]
+2 genes dropped for zero variance across MCF-7 dose series (flat
+expression, no dose-response at all) - see script output for identity.
+Heatmap: figures/h_survival_candidate_genes_heatmap.png. This closes
+the 8th and final deliverable from the original extension criteria list.
+Extension status: 8/8 complete (7 direct + 1 documented substitution
+for KM Plotter -> direct Cox PH, methodologically equivalent).
