@@ -725,3 +725,14 @@ pints/stats_engine.py get_elbow() directly (replaced np.cross with the
 explicit 2D scalar cross-product formula, numpy-version-independent)
 rather than downgrading numpy in the shared macs3 venv, which also runs
 MACS3 peak calling used throughout the entire project.
+
+[2026-08] [Part 2] [PINTS PRO-seq peak calling complete, all 4 doses]
+Successfully ran after patching the numpy 2.0 incompatibility (see prior
+entry). All 4 doses completed (~11hr total runtime). PINTS itself
+flagged at every dose: "number of significant calls higher than usually
+observed in TSS assays, consider smaller FDR cutoff" - default
+fdr_target=0.1 may be too permissive. Peak counts being checked before
+deciding whether to retune and rerun.
+This closes the previously-flagged gap: PRO-seq had only ever been used
+as a signal overlay (bedtools map on pre-existing peak boundaries),
+never independently peak-called.
