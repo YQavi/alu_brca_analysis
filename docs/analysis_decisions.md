@@ -715,3 +715,13 @@ inconclusive result at current sample size, not a confirmed finding -
 report accordingly. Larger n (e.g. pooling replicate enhancer definitions,
 or lower-stringency Set B threshold) would be needed to resolve whether
 the observed direction is real.
+
+[2026-08] [Part 2] [PINTS numpy 2.0 incompatibility, patched]
+pints_caller 1.2.1 failed on all 4 doses with ValueError in np.cross -
+confirmed via numpy's own GitHub issue #26620 that 2D-vector support in
+np.cross was deprecated in NumPy 2.0 and is now a hard error. Not a data
+or command issue - PINTS predates this numpy change. Patched
+pints/stats_engine.py get_elbow() directly (replaced np.cross with the
+explicit 2D scalar cross-product formula, numpy-version-independent)
+rather than downgrading numpy in the shared macs3 venv, which also runs
+MACS3 peak calling used throughout the entire project.
