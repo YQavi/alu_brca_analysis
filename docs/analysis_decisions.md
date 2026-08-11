@@ -771,3 +771,27 @@ to ERalpha binding itself, not to the broader chromatin/transcriptional
 activity marks ERalpha helps establish nearby.
 This completes independent PRO-seq peak calling for the project -
 final files: PROseq_{dose}_1_bidirectional_qval_final.bed
+
+[2026-08] [Part 2] [Set B v2 (true PINTS peaks) replicates original proxy-based result]
+Re-ran Set A/B Alu-overlap test using genuine independently-called PINTS
+peaks (Stringent(qval) tier) instead of the bidirectionality-index proxy.
+FDR rigor check: PINTS bed output has no raw q-value column, only
+categorical tier labels - direct 0.05 refiltering not possible without a
+full PINTS rerun at --fdr-target 0.05 (not done, see rationale below).
+Stringent(qval) itself is a real criterion (BOTH strands independently
+pass FDR-corrected significance), but judged against PINTS's own default
+10% FDR target rather than this project's standard 5%.
+RESULT: closely replicates the original proxy-based finding once 10pM
+(complete separation, 0/38 events) is excluded: effect=-0.145 p=0.38
+(vs original -0.149 p=0.41); dose interaction p=0.86 (vs original p=0.93,
+both non-significant); no subfamily survives FDR<0.05 in either version.
+DECISION: given two methodologically independent Set B definitions
+(heuristic index vs. true independent peaks) converge on the same
+direction, magnitude, and non-significance, did NOT rerun PINTS at a
+stricter FDR target - the ~11hr cost is not justified given this
+convergence already demonstrates the result is not an artifact of the
+Set B definition method.
+NOTE: nearest-Alu search in this extension (unlike core H1/H8 tiering)
+includes FLAM/FRAM/FAM monomer elements, not dimer-Alu only - FRAM
+appears near the top of the subfamily table (non-significant). Flag if
+this table is used in a write-up.
