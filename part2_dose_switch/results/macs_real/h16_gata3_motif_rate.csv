@@ -1,0 +1,4 @@
+subfamily,n_hit,n_total,fraction,vs_shuffled_OR,vs_shuffled_p,vs_AluY_OR,vs_AluY_p
+AluY,147,107027,0.001373,0.04,0.0,1.00,NA
+AluSc,73,32560,0.002242,0.06,4.49e-259,1.63,0.001006
+AluJr4,239,11918,0.020054,0.44,2.07e-26,14.88,2.2e-16

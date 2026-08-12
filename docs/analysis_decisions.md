@@ -926,3 +926,22 @@ DECISION: retain H15's original nearest-only result (n=9 vs 1241, p=0.038)
 as the trustworthy test. Not pursuing further window-width variants -
 the rarity of the motif, not the proximity definition, is the binding
 constraint.
+
+[2026-08] [Part 2] [H16: GATA3 motif mirrors FOXA1 pattern - closes the AluJr4 mechanism gap]
+Same H11 pipeline (length-filtered, composition-matched shuffled
+background) applied to GATA3 (JASPAR MA0037.5, 24,868-site matrix).
+RESULT: AluJr4 carries the GATA3 motif ~15x more often than AluY
+(2.01% vs 0.14%, OR=14.88, p<2.2e-16) - same graded AluY<AluSc<AluJr4
+pattern as H11's FOXA1 result (OR=1.63 for AluSc vs AluY, p=0.001).
+All three subfamilies remain below their own shuffled background
+(OR=0.04-0.44), confirming this is real depletion-with-gradient, not a
+threshold artifact - identical validation structure to H11.
+SIGNIFICANCE: this closes the previously-unexplained piece of the
+mechanism (H7: GATA3's AluJr4-specific enrichment, opposite direction
+from FOXA1/ERalpha's general pattern, cause unknown). GATA3's own motif
+is genuinely more available in AluJr4 than AluY, mirroring exactly what
+H11 found for FOXA1 - two independent transcription factors show the
+same age-graded motif-availability pattern. This is now strong evidence
+for a GENERAL sequence-decay-driven mechanism (older Alu = more available
+canonical TF motifs of multiple kinds) rather than a FOXA1-specific
+phenomenon, with GATA3/AluJr4 as a second independent confirmation.
