@@ -907,3 +907,22 @@ with only 9 total motif-carrying instances in this dataset - would need
 either genome-wide (not just nearest-Alu-instance) motif-vs-distance
 testing, or pooling across a larger Alu subfamily set, to test that
 specific sub-question properly.
+
+[2026-08] [Part 2] [H15 follow-up: window-widening test was methodologically invalid, real constraint is motif rarity]
+Tested whether "nearest Alu" (H15) was too restrictive by widening to
+5kb/10kb windows. Result showed motif-carrying AluY count DROP (9->1->1),
+initially looked like "nearest was too tight, going wider loses signal" -
+INCORRECT interpretation. Root cause: the widened test used bedtools
+merge (collapsing overlapping enhancer instances across 4 doses into
+fewer deduplicated loci) and counted unique AluY genomic loci rather
+than enhancer-instances - a structurally different, non-comparable count
+from H15's original 1,250-instance analysis. Not a valid A/B comparison.
+REAL CONSTRAINT IDENTIFIED: only 63 AluY copies genome-wide carry the
+FOXA1 motif (0.058% of 107,027, per H11). This is a hard ceiling on
+statistical power regardless of window definition - widening cannot
+meaningfully increase available signal when the numerator is capped this
+low by the biology itself, not by an analysis choice.
+DECISION: retain H15's original nearest-only result (n=9 vs 1241, p=0.038)
+as the trustworthy test. Not pursuing further window-width variants -
+the rarity of the motif, not the proximity definition, is the binding
+constraint.
