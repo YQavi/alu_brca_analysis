@@ -850,3 +850,21 @@ significant - a known, common artifact of enhancer/promoter-proximal
 gene lists tested against whole-genome background (broad regulatory
 terms dominate any such list), not a specific/informative finding on
 its own. Not reporting those term lists as meaningful results.
+
+[2026-08] [Part 2] [H14: distance-to-Alu tested as continuous variable - two results]
+Extended the binary overlap tests to continuous distance, using the
+already-computed nearest-Alu distance data (Set A/B v3, n=15,906).
+(1) Distance vs transcriptional confirmation: NULL, consistent with all
+prior binary tests. Set A median=815bp, Set B median=797bp, p=0.69;
+formal dose-interaction model also null (p=0.59-0.59, no dose effect).
+This is the 5th independent test (after Alu-overlap x3, GO enrichment,
+now distance) converging on "PROseq confirmation status is unrelated
+to Alu proximity in any form tested."
+(2) Distance vs Alu age tier: REAL, significant (Kruskal-Wallis p<1e-4,
+n=15,201 across 3 tiers). Young Alu sits farther from ERalpha enhancers
+(median 921bp) than middle (805bp) or old (788bp) - a ~17% difference,
+modest but real effect size. This extends H1's binary exclusion finding:
+ERalpha not only avoids directly overlapping young Alu, but tends to
+sit somewhat farther away even when not overlapping - consistent with
+an exclusion zone around young Alu rather than a purely binary avoidance
+at the exact element boundary.
