@@ -945,3 +945,33 @@ same age-graded motif-availability pattern. This is now strong evidence
 for a GENERAL sequence-decay-driven mechanism (older Alu = more available
 canonical TF motifs of multiple kinds) rather than a FOXA1-specific
 phenomenon, with GATA3/AluJr4 as a second independent confirmation.
+
+[2026-08] [Part 2] [MECHANISM-HUNTING PHASE CLOSED - documented gaps for future work]
+Closing the active mechanism-testing thread (H1-H17) at this point.
+Two identified, legitimate gaps not pursued further given time budget:
+(1) GATA3's real ChIP-seq binding was never tested at fine subfamily
+resolution (only tier-level in H7) - unlike ERalpha (H8, 49 subfamilies)
+and FOXA1 (H9, 3 subfamilies), both of which received this treatment.
+(2) GATA3 distance-to-enhancer (H17) was only tested for AluJr4, not
+across all three tiers the way H14 comprehensively tested for ERalpha.
+Both are legitimate, well-scoped follow-up analyses using infrastructure
+already built, documented here for anyone continuing this work.
+
+FINAL FINDING INVENTORY (11+ non-null results, this phase):
+H1: ERalpha depleted at Alu, age-graded, confound-tested (2x)
+H7: FOXA1 mirrors ERalpha's AluY depletion; GATA3 diverges at AluJr4
+H8: Depletion is subfamily-specific (AluY/AluSc real, AluJr4 reversed), FDR-corrected
+H10: Strong enhancers show more middle-tier Alu overlap, dose-independent, validated against true log-fold-enrichment
+H11: FOXA1 motif ~8x rarer in AluY vs AluJr4, background-validated, truncation-robust
+H12: Alu overlap dampens bidirectional transcription in strong enhancers
+H14: Young Alu sits dose-dependently farther from ERalpha enhancers
+H15: Within AluY, motif-carrying copies sit closer to enhancers (individual-copy link)
+H16: GATA3 motif mirrors FOXA1's age-graded pattern (independent 2nd TF confirmation)
+H17: GATA3/AluJr4 spatial dynamics do NOT mirror FOXA1/AluY - real, informative asymmetry
+Extension: H3K27ac confirmation of ERalpha peaks declines steeply with dose (75.8%->41.1%)
+DESeq2: 8 genes show real dose-responsive expression (TBX2, SIAH2, CASP7, ADORA1, BATF, BCL3, SH3BP4, FCMR)
+
+NULL RESULTS (methodologically necessary, not wasted - see decision log for each):
+STAT1/immune motif, CIA-gene overlap, chromatin accessibility, bulk CpG,
+survival (3 independent tests), GO pathway enrichment, transcriptional-
+confirmation-vs-Alu (Set A/B, 3-way FDR robustness checked).
