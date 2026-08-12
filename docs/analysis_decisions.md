@@ -823,3 +823,16 @@ restricted to dimer-only elements the way core H1/H8 tiering was.
 FINAL STATUS: extension complete, 8/8 original criteria met, Set A/B
 Alu-overlap finding cross-validated at three independent rigor levels,
 all converging on the same null conclusion.
+
+[2026-08] [Part 2] [CORRECTION: GO enrichment background was self-referential, invalidating first attempt]
+First enrichment run (script 21) used background=union(SetA,SetB) genes.
+Since SetB v3 was built via bedtools intersect on SetA (SetB is a subset
+of SetA by construction), this background was ~identical to SetA itself,
+making the "SetA vs background" test a self-comparison. Result (811/811
+terms "significant") was the expected artifact of this error, not a
+real finding - discarded, not reported.
+FIX: (1) genome-wide background (org.Hs.eg.db full SYMBOL keyspace) for
+reference enrichment of each set independently, (2) the scientifically
+meaningful test - SetB v3 (PROseq-confirmed) vs SetA-only (not
+confirmed), within-SetA comparison - run directly, which is the real
+test of what distinguishes transcriptionally-confirmed enhancers.
