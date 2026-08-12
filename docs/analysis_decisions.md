@@ -885,3 +885,25 @@ ERalpha enhancers, more so at higher doses) but it is a small effect
 layered on substantial unexplained variation, not a dominant spatial
 pattern. Report magnitude and R^2 alongside significance, not p-value
 alone - avoids overstating what this finding actually explains.
+
+[2026-08] [Part 2] [H15: FOXA1 motif presence in AluY predicts distance to enhancer - closes H11/H14 link]
+Direct test: among AluY copies within the length-filtered scanned universe
+(n=107,027) that also appear as nearest-Alu to a real enhancer (n=1250
+instances), does carrying the FOXA1 motif (n=9) vs not (n=1241) predict
+distance. RESULT: motif-present median=653bp, motif-absent median=951bp,
+Wilcoxon p=0.038 - a real, moderately-powered effect in the expected
+direction (motif presence -> closer to enhancer). Controlled model
+confirms main effect strongly (has_motif estimate=-3.19, p=0.0027) but
+dose-interaction terms are NOT reliable (n=9 motif-carriers split across
+4 doses x 2 sets produces near-empty cells; dose10nM interaction
+un-estimable/singular, dose100pM interaction p=0.059 likely noise from
+small-cell instability, not a real dose-specific signal).
+CONCLUSION: this closes the direct mechanistic link between H11 (FOXA1
+motif rarity in AluY) and H14 (young-Alu spatial exclusion) - motif-
+carrying AluY copies specifically sit closer to ERalpha enhancers,
+consistent with FOXA1 needing the motif to open chromatin there in the
+first place. The dose-dependence of this specific link is NOT resolvable
+with only 9 total motif-carrying instances in this dataset - would need
+either genome-wide (not just nearest-Alu-instance) motif-vs-distance
+testing, or pooling across a larger Alu subfamily set, to test that
+specific sub-question properly.
