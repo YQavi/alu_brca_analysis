@@ -803,3 +803,23 @@ Heatmap: figures/h_survival_candidate_genes_heatmap.png. This closes
 the 8th and final deliverable from the original extension criteria list.
 Extension status: 8/8 complete (7 direct + 1 documented substitution
 for KM Plotter -> direct Cox PH, methodologically equivalent).
+
+[2026-08] [Part 2] [Three-way FDR robustness check complete: v1/v2/v3 converge]
+Final comparison across three independent Set B definitions:
+v1 (bidirectionality proxy): effect=-0.149 p=0.41, dose-interaction p=0.93
+v2 (PINTS FDR-target 0.1):   effect=-0.145 p=0.38, dose-interaction p=0.86
+v3 (PINTS FDR-target 0.05):  effect=-0.116 p=0.49, dose-interaction p=0.87
+All three converge on: right-direction (Alu depletion), non-significant,
+dose-independent. Stricter FDR (0.05 vs 0.1) did NOT manufacture or
+reveal a significant effect - if anything shrank the point estimate
+further from significance, opposite of what looser-threshold-inflation
+would predict. This is strong evidence the null result is real and not
+an artifact of any single method's calling rigor.
+Subfamily table: FRAM (FLAM-derived monomer, not true dimeric Alu)
+closest to significance in both v2 (FDR=0.11) and v3 (FDR=0.054, nearly
+crossing 0.05) - flagged explicitly as non-Alu if ever reported, per
+the scope note that this extension's nearest-Alu search is not
+restricted to dimer-only elements the way core H1/H8 tiering was.
+FINAL STATUS: extension complete, 8/8 original criteria met, Set A/B
+Alu-overlap finding cross-validated at three independent rigor levels,
+all converging on the same null conclusion.
