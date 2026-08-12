@@ -868,3 +868,20 @@ ERalpha not only avoids directly overlapping young Alu, but tends to
 sit somewhat farther away even when not overlapping - consistent with
 an exclusion zone around young Alu rather than a purely binary avoidance
 at the exact element boundary.
+
+[2026-08] [Part 2] [H14 refined: young-Alu distance effect is real but dose-dependent and small]
+Controlled model (log1p(distance) ~ alu_tier*dose + set) refines the
+raw Kruskal-Wallis result. Young-tier main effect at 10pM only marginal
+(p=0.057) - NOT the clean significance the unadjusted test suggested.
+But young:dose1nM (p=0.021) and young:dose10nM (p=0.015) interactions
+ARE significant - the effect is dose-dependent, strengthening at higher
+doses, not uniform. Old-tier: no effect at any dose (p=0.85+). Set A/B
+(PROseq confirmation): still null (p=0.54) - 6th consistent null on
+this specific question.
+IMPORTANT CAVEAT: model R^2=0.0035 - despite significant terms, this
+explains <1% of total distance variance. Correct framing: a real,
+reproducible, dose-dependent effect exists (young Alu sits further from
+ERalpha enhancers, more so at higher doses) but it is a small effect
+layered on substantial unexplained variation, not a dominant spatial
+pattern. Report magnitude and R^2 alongside significance, not p-value
+alone - avoids overstating what this finding actually explains.
