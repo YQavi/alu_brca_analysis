@@ -836,3 +836,17 @@ reference enrichment of each set independently, (2) the scientifically
 meaningful test - SetB v3 (PROseq-confirmed) vs SetA-only (not
 confirmed), within-SetA comparison - run directly, which is the real
 test of what distinguishes transcriptionally-confirmed enhancers.
+
+[2026-08] [Part 2] [Second GO enrichment bug caught and fixed: hypergeometric framing invalid for disjoint groups]
+Script 21b's "real comparison" section silently reused SetA (which
+contains SetB) as background instead of SetA-only - confirmed via
+byte-identical output to the original broken run. Root cause: SetB and
+SetA-only are DISJOINT groups (not nested), so a hypergeometric
+subset-in-universe test doesn't apply at all - the correct test is a
+direct 2-group Fisher's exact per GO term, same structure as H8/H10.
+Rewrote as script 21c. Also flagged: the "vs genome background" reference
+comparisons (script 21b, valid this time) show ~60% of all tested terms
+significant - a known, common artifact of enhancer/promoter-proximal
+gene lists tested against whole-genome background (broad regulatory
+terms dominate any such list), not a specific/informative finding on
+its own. Not reporting those term lists as meaningful results.
