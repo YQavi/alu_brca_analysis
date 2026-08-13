@@ -1077,3 +1077,24 @@ demonstration that sequence match predicts real occupancy.
 AluSc: same direction (OR=1.95) but not significant at n=10nM alone
 (p=0.32) - underpowered given rarity of any single-locus overlap event;
 pooled-dose retest in progress for more power.
+
+[2026-08] [Part 2] [H23: motif co-occurrence at AluJr4 - FOXA1/ERE significantly depleted, GATA3/ERE independent]
+Tested whether ERE enrichment reflects the same "generally preserved"
+copies as FOXA1/GATA3 motifs, or independent retention. Using AluJr4
+length-filtered population (n=11,918):
+  GATA3 x ERE: observed=93, expected under independence=93.3 - no
+    relationship (essentially exact chance).
+  FOXA1 x ERE: observed=13, expected under independence=24.5 - Fisher's
+    exact OR=0.41, p=0.0026, 95% CI [0.20,0.76] - SIGNIFICANT DEPLETION,
+    not just absence of enrichment. FOXA1-motif-carrying copies are
+    ~2.5x less likely than chance to also carry the ERE-like motif.
+CONCLUSION: old Alu's enrichment for all three motifs (H11/H16/H21) is
+NOT explained by a small subset of generally-resilient copies retaining
+everything together. Different individual copies preserve different
+motifs, largely independently - and for FOXA1/ERE specifically, with a
+real, statistically significant tendency toward mutual exclusivity
+rather than co-occurrence. Reinforces that this project's exclusion
+finding (FOXA1-gated, indirect) and the ERE finding (ERalpha's own
+motif, direct) are genuinely separate, empirically uncorrelated lines
+of evidence pointing at the same outcome - not the same underlying
+"well-preserved copy" story restated twice.
