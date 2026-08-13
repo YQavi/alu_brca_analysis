@@ -1098,3 +1098,11 @@ finding (FOXA1-gated, indirect) and the ERE finding (ERalpha's own
 motif, direct) are genuinely separate, empirically uncorrelated lines
 of evidence pointing at the same outcome - not the same underlying
 "well-preserved copy" story restated twice.
+
+[2026-08] [Part 2] [Track visualization finalized: real signal at chr11:16,793,810-16,799,810]
+Multi-track figure built from real bigwig data at a confirmed H22 locus
+(ERE-motif-positive AluJr4, real ERalpha overlap). One correction made:
+initial title said "AluY" (leftover from an earlier script template,
+predating the pivot to the AluJr4/ERE locus) - title corrected to
+match the real annotation track (AluSz6, AluSq2, AluJr4), which was
+always accurate. Final figure: track_visualization.png.
