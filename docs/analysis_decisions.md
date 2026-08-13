@@ -1052,3 +1052,16 @@ Worth flagging as the most interesting single result to emerge from the
 whole motif-scanning arc, and a direct, positive validation of the
 project's original founding premise (Hou & Kraus), even though the
 overall ERalpha/Alu functional consequences remain null elsewhere.
+
+[2026-08] [Part 2] [CORRECTION: H21's claimed link to Hou & Kraus's FERM motif was wrong]
+The prior H21 log entry claimed the ERE enrichment finding "connects
+directly to Hou & Kraus (2022)'s FERM motif" - this was checked and is
+INCORRECT. FERM (Functional eRNA Regulatory Motif) is an RNA-level motif
+within enhancer RNA transcripts that binds the protein BCAS2, demonstrated
+via CRISPR/dCas9 eRNA-tethering experiments - a fundamentally different
+molecule and mechanism from ERE (the DNA sequence ESR1/ERalpha itself
+binds, JASPAR MA0112.4, what H21 actually scanned for). No evidence
+found connecting FERM to Alu sequence or to ERE specifically. RETRACTING
+that connection. H21's core finding (ERE-like DNA sequence enriched
+14-29x above chance in AluSc/AluJr4) stands on its own and does not
+need this incorrect citation to be a real, interesting result.
