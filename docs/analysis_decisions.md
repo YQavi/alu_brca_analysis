@@ -1000,3 +1000,28 @@ now has the same fine-subfamily, FDR-corrected resolution as ERalpha
 distance), GATA3's picture is now considerably more complete: it shares
 AluY-avoidance with FOXA1/ERalpha AND has its own distinct old-lineage
 (not just AluJr4) enrichment story, with real dose-dependence in both.
+
+[2026-08] [Part 2] [H20: distance-to-Alu tested directly against gene expression, real but tiny effect]
+Fixed a system()/sh process-substitution bug (bedtools closest silently
+failed under R's system() call, sh doesn't support <(...) - same class
+of issue as earlier session fixes) and two real many-to-many join
+duplications (54 tied nearest-Alu rows, 1,103 tied nearest-gene rows,
+83 duplicate gene symbols in DESeq2 results) - all deduped properly
+(tied rows: kept first; duplicate symbols: kept most significant).
+Final n=3,462 genes with both a real distance-to-Alu value and a real
+DESeq2 10nM-vs-Veh result.
+RESULT, confirmed stable pre/post dedup: distance-to-Alu correlates
+with dose-response magnitude, rho=0.072, p<0.0001 - REAL but very
+small (explains ~0.5% of variance, same order of magnitude as H14's
+own R^2=0.0035). Second, more decisive test: genes that significantly
+respond to dose (n=463) sit at essentially the same distance from Alu
+as non-responders (878bp vs 813bp, p=0.89) - a clean null.
+CONCLUSION: distance to Alu has a real but tiny, likely non-actionable
+relationship with dose-response magnitude, and no relationship at all
+with whether a gene responds significantly in the first place. This
+directly answers the "wouldn't gene expression differ natively" question
+- expression clearly varies by dose (that's what DESeq2 detected in the
+first place), but that variation is not meaningfully explained by Alu
+proximity. Consistent with, and now the most direct test yet of, the
+project's broader pattern: Alu's relationship to these enhancers has
+essentially no detectable downstream transcriptional consequence.
