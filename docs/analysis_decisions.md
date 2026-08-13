@@ -975,3 +975,28 @@ NULL RESULTS (methodologically necessary, not wasted - see decision log for each
 STAT1/immune motif, CIA-gene overlap, chromatin accessibility, bulk CpG,
 survival (3 independent tests), GO pathway enrichment, transcriptional-
 confirmation-vs-Alu (Set A/B, 3-way FDR robustness checked).
+
+[2026-08] [Part 2] [H18: GATA3 real binding tested at fine subfamily resolution, mirrors H8/H9 for ERalpha/FOXA1]
+Fixed a regex escaping bug (\\\\b became literal double-backslash rather
+than \b word boundary, caused all peak counts to silently read as 0/0
+on first attempt) - corrected, real counts: GATA3 pM=9,066, nM=11,904
+peaks, matching established H7 totals.
+49 subfamilies tested (FDR-corrected). Significant at FDR<0.05:
+  AluY: DEPLETED at pM (ratio=0.624, FDR=0.0015) - GATA3 avoids young
+    Alu too, not just enriched at old Alu - a real parallel to the
+    FOXA1/AluY exclusion story.
+  AluSx3: DEPLETED at nM (ratio=0.320, FDR=0.015) - strongest depletion
+    in the table, a new specific finding not visible at tier level.
+  AluJb, AluJo, AluJr: ENRICHED at nM (ratios 1.26-1.89, FDR down to
+    4.4e-11) - the fine-grained backbone underneath H7's AluJr4 tier-
+    level finding; enrichment spans the broader AluJ lineage, not just
+    AluJr4 specifically.
+Dose asymmetry: nearly every tested subfamily's ratio shifts toward
+enrichment from pM to nM, consistent with GATA3's established dose-
+dependent behavior (H7).
+THIS CLOSES GAP 1 from the "next directions" list: GATA3's real binding
+now has the same fine-subfamily, FDR-corrected resolution as ERalpha
+(H8) and FOXA1 (H9). Combined with H19 (young-tier dose interaction in
+distance), GATA3's picture is now considerably more complete: it shares
+AluY-avoidance with FOXA1/ERalpha AND has its own distinct old-lineage
+(not just AluJr4) enrichment story, with real dose-dependence in both.
