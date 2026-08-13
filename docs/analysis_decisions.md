@@ -1025,3 +1025,30 @@ first place), but that variation is not meaningfully explained by Alu
 proximity. Consistent with, and now the most direct test yet of, the
 project's broader pattern: Alu's relationship to these enhancers has
 essentially no detectable downstream transcriptional consequence.
+
+[2026-08] [Part 2] [H21: ERE motif scan reveals a DIFFERENT pattern from FOXA1/GATA3 - ancestral enrichment, not suppression]
+Same H11/H16 pipeline (length-filtered, composition-matched shuffled
+background), applied to ESR1/ERE (JASPAR MA0112.4, 15bp, 614 sites).
+RESULT, qualitatively different shape from FOXA1/GATA3:
+  AluSc: 62.45% real vs 5.45% shuffled, OR=28.86 (massive ENRICHMENT above chance)
+  AluJr4: 38.87% real vs 4.24% shuffled, OR=14.38 (massive ENRICHMENT above chance)
+  AluY: 5.28% real vs 5.94% shuffled, OR=0.88 (trivial deviation, near chance)
+AluY vs AluJr4: OR=0.088, p<2.2e-16 - same young<old direction as FOXA1/GATA3,
+but via a DIFFERENT mechanism: FOXA1/GATA3 showed suppression BELOW chance
+in every tier (Alu generally disfavors those motifs). ERE shows massive
+enrichment ABOVE chance specifically in AluSc/AluJr4 - the older Alu
+lineages structurally encode ERE-like sequence as part of their own
+consensus, not merely "less suppressed" than AluY.
+CONNECTS DIRECTLY to Hou & Kraus (2022)'s FERM motif finding (ERE-like
+sequence embedded in Alu's ancestral consensus) - this is the subfamily-
+resolved confirmation/extension of that claim. Also explains Part 1's
+original pooled finding (ERE enrichment at Alu-overlapping ERalpha peaks,
+OR=1.78) as very likely driven by AluSc/AluJr4, not AluY.
+SIGNIFICANCE: this is a stronger candidate for genuine "molecular
+domestication" than the FOXA1/GATA3 results - ancestral, structural
+motif enrichment at 14-29x chance is far less plausibly incidental than
+short generic motifs appearing/disappearing via ordinary point mutation.
+Worth flagging as the most interesting single result to emerge from the
+whole motif-scanning arc, and a direct, positive validation of the
+project's original founding premise (Hou & Kraus), even though the
+overall ERalpha/Alu functional consequences remain null elsewhere.
