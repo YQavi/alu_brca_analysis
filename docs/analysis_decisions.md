@@ -1065,3 +1065,15 @@ found connecting FERM to Alu sequence or to ERE specifically. RETRACTING
 that connection. H21's core finding (ERE-like DNA sequence enriched
 14-29x above chance in AluSc/AluJr4) stands on its own and does not
 need this incorrect citation to be a real, interesting result.
+
+[2026-08] [Part 2] [H22: intact ERE motif predicts REAL ERalpha binding within-subfamily]
+Direct locus-level test: does motif-positive vs motif-negative status
+(within the same subfamily, age held constant) predict real ERalpha
+ChIP-seq occupancy. AluJr4: motif+=0.389% vs motif-=0.069% overlap,
+OR=5.68, p=0.00015 - STRONG, SIGNIFICANT. This is the strongest
+computational (non-wet-lab) evidence for function generated in this
+project: not correlation with age, a direct within-subfamily
+demonstration that sequence match predicts real occupancy.
+AluSc: same direction (OR=1.95) but not significant at n=10nM alone
+(p=0.32) - underpowered given rarity of any single-locus overlap event;
+pooled-dose retest in progress for more power.
