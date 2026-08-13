@@ -1106,3 +1106,14 @@ initial title said "AluY" (leftover from an earlier script template,
 predating the pivot to the AluJr4/ERE locus) - title corrected to
 match the real annotation track (AluSz6, AluSq2, AluJr4), which was
 always accurate. Final figure: track_visualization.png.
+
+[2026-08] [Part 2] [Per-dose track figures: FOXA1/GATA3 confirmed pooled-only, correctly labeled]
+Confirmed via file listing: FOXA1 and GATA3 only exist as pM/nM pooled
+bigwigs (GSE298767_FOXA1_pM_R1_R2.bw, _nM_R1_R2.bw, same for GATA3) -
+no individual-dose files exist for either factor. Built 4 separate
+per-dose track figures (10pM/100pM/1nM/10nM), each showing composite
+enhancer score (dose-specific) + FOXA1 + GATA3 (both explicitly labeled
+"pM-pooled" or "nM-pooled" in the axis label, since 10pM/100pM/1nM all
+necessarily show identical FOXA1/GATA3 panels) + Alu positions.
+Deliberately avoided implying individual-dose FOXA1/GATA3 resolution
+that doesn't exist in the underlying data.
