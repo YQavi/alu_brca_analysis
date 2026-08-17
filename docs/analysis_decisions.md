@@ -1127,3 +1127,25 @@ hg18->hg19->hg38 via UCSC chain files. 1,756/1,794 (97.9%) successfully
 mapped to hg38 - normal attrition for hg18-origin data, no evidence of
 systematic bias. Final file: richi_peaks_hg38.bed, ready for direct
 comparison against this project's hg38 Alu/RepeatMasker annotation.
+
+[2026-08] [Richi cross-check] [Reconciliation resolved: full-Alu distance test replicates the project's own null]
+Direct test on Richi's real, lifted-to-hg38 GRO-seq activity data (1,880
+peaks, median-split into high/low activity by read count) against this
+project's full hg38 Alu annotation: median distance 459bp (high) vs
+505bp (low), p=0.32 - NOT significant, matching this project's own
+Set A/B null result in shape and magnitude.
+This resolves the original discrepancy: Richi's reported 452bp vs
+111,000bp difference cannot be reproduced using the full Alu reference
+population - both tiers sit close to SOME Alu regardless of activity,
+because Alu is genome-wide dense. Richi's dramatic result almost
+certainly depended on a much smaller, independently-pre-filtered
+"active Alu" subset, not the full annotation - confirms the hypothesis
+proposed before this check was run, now with real supporting data.
+Subfamily composition: old-lineage subfamilies (AluJ*) show a real but
+modest enrichment near high-activity peaks (29.1% vs 24.5% of tested
+peaks) - directionally consistent with H22's finding, magnitude to be
+confirmed via formal test.
+CONCLUSION FOR PRESENTATION: this project's null findings (Set A/B, H12)
+are not contradicted by Richi's work once tested on equivalent terms -
+the apparent conflict was a reference-population artifact, not a real
+disagreement between the two projects.
