@@ -1149,3 +1149,18 @@ CONCLUSION FOR PRESENTATION: this project's null findings (Set A/B, H12)
 are not contradicted by Richi's work once tested on equivalent terms -
 the apparent conflict was a reference-population artifact, not a real
 disagreement between the two projects.
+
+[2026-08] [Part 2] [H1 re-validated with promoter-proximal exclusion - core finding unchanged]
+Applied Richi Thakral's methodological constraint (removing peaks within
+-1000/+1000bp of TSS) - a real gap in this project's own pipeline,
+never previously applied. 8-12% of ERalpha peaks removed at every dose
+(99->88, 2608->2350, 5766->5144, 13140->11838).
+Re-ran H1's core age-tier depletion test on the promoter-filtered set:
+young-tier ratios essentially unchanged (100pM: 0.446->0.466, 1nM:
+0.453->0.519, 10nM: ~0.45->0.468); old-tier remains at ~1.0 in both
+versions (10nM: 1.028 filtered vs ~1.0 original).
+CONCLUSION: the foundational depletion finding is NOT an artifact of
+promoter-proximal signal. This is a real, adopted improvement to the
+pipeline (closes a genuine gap relative to Thakral's more careful
+enhancer-classification methodology) that confirms rather than
+undermines the project's core result.
