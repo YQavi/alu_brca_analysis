@@ -1117,3 +1117,13 @@ enhancer score (dose-specific) + FOXA1 + GATA3 (both explicitly labeled
 necessarily show identical FOXA1/GATA3 panels) + Alu positions.
 Deliberately avoided implying individual-dose FOXA1/GATA3 resolution
 that doesn't exist in the underlying data.
+
+[2026-08] [Richi cross-check] [Genome build confirmed hg18, two-hop liftOver complete]
+Richi's datasets (ERalpha ChIP, RNA Pol II ChIP, GRO-seq) were confirmed
+via GEO metadata to be processed against hg18 - not hg19 or hg38.
+richiScratch_enhancers.bed (24,625 rows = peak x GRO-seq-read
+intersection) deduplicated to 1,794 unique enhancer peaks, lifted
+hg18->hg19->hg38 via UCSC chain files. 1,756/1,794 (97.9%) successfully
+mapped to hg38 - normal attrition for hg18-origin data, no evidence of
+systematic bias. Final file: richi_peaks_hg38.bed, ready for direct
+comparison against this project's hg38 Alu/RepeatMasker annotation.
